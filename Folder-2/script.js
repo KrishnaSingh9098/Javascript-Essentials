@@ -53,12 +53,30 @@
 // console.log(color);  // Output: black
 
 
-var age = Number(prompt("Enter your age:"));
+// var age = Number(prompt("Enter your age:"));
 
-if (age > 18 && age < 32) {
-    console.log("You can go to OYO.");
-} else if (age > 50) {
-    console.log("Why are you going to OYO? Viagra doesn't work on you.");
-} else {
-    console.log("Pogo dekho beta, jaake.");
-}
+// if (age > 18 && age < 32) {
+//     console.log("You can go to OYO.");
+// } else if (age > 50) {
+//     console.log("Why are you going to OYO? Viagra doesn't work on you.");
+// } else {
+//     console.log("Pogo dekho beta, jaake.");
+// }
+
+
+// for(let i=1;i<=10;i++){
+//     console.log("Krshna Thakur")
+// }
+
+
+// let sum = 0;
+// for(let i=0;i<10;i++){
+//     sum+=1;
+// }
+// console.log("sum" + sum)
+
+var i=1;
+while(i<=5){
+    console.log("Helllo World" + i)
+   
+}i++

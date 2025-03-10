@@ -108,8 +108,28 @@ Example-1 : var age = Number(prompt("Enter your age:"));
                             }
 
 
+                                          /* - L-O-O-P-S - */
+
+  For-Loop : for(int i=1;i<=n;i++){                                              .initialization Condition
+                  //Body of the loop                                             .Stopping Condition
+                                 }                                               .Updation
 
 
-                                                               
+  While-Loop : while(condition) {                                    Example: let i=1;
+                   //Do SOme Work                                             while(i<=5){
+                               }                                                  console.log("i" + i);
+                                                                                     } i++;
+                                                                                  
+ [ IN While Loop Condition Check at the Start OF the Loop ].
 
+
+ Do-While-Loop : do{                                                Example: let i=2;
+            // Do Some Work                                                  do{
+               }                                                               console.log("Krishna Thakur");
+               while(Consdition);                                                i++;
+                                                                                }
+                                                                             while(i<=5);
+                                                                              
+
+  ^-^ Condition Check at the End Of The Loop ^-^
                       
