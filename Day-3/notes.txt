@@ -1,0 +1,40 @@
+/*  ---- STRINGS ----  */
+
+String is a Number Of Characters used to represents Text .
+1. "" : Double Quotes.
+2. '' : Single Quotes.
+
+# Creation Of Strings :
+
+1. Let str = "Krishna Thakur";
+2. var str = 'Akansha Singh';
+
+For finding the length of the String :{ str.length } Shold be used.
+
+
+                                                     "Template-Literals"
+
+ A way to have embedded expressions in Strings.   
+ #String InterPolation 
+ way to express : `${a} this is the way with the Dollar sign ${}`   [BACKSTRICKS]
+
+ # Value should also be countable on this Template Literals.
+ # ESCAPE CHARACTERS : /n = use for giving next line in String.
+                       /t = use for giving tab in line of String.
+   Escape Character : Should be counted as a Single Character String.
+
+
+ STRING METHODS : These are built-in functions to manipulate a String.
+
+ 1.toUpperCase() : for Conversion into UpperCase.
+ 2.toLowerCase() : for Conversion into LowerCase.
+ 3.trim() : remove White Spaces.
+ 4.Slice(start,end). // It gives a value with the perfect index values.
+ 5.Concat(str1,str2). // JOin String 2 with string 1.
+ 6.Replace(searchVAl,newVAl). // Adds A new Value in the Place of Previous Value.
+ 7.CharAt(idx). // This GIves A Value Of Particular Index.
+ 8.includes() :  give us a true/false statement that we actually find is that he allocate or not.
+ 9. Split() : us Particular Words se strign TUt jayegi har baar
+ 10.length : it was Used To Count the VAlue Of The Length.
+ # Strings are Immutable in Java-Script. They Cannot be Changed.
+                                        
