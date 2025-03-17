@@ -1,0 +1,53 @@
+                                            /* FUNCTIONS IN JS  */
+
+
+Functions : In JavaScript, a function is a block of code designed to perform a specific task. It can be defined using the 
+            function keyword or as an arrow function, and can accept parameters and return a resultand Can be invoked Whenever 
+            needed.
+
+HInglish  : JavaScript mein, function ek code ka block hota hai jo specific task ko perform karta hai. Isse function keyword ya
+            arrow function se define kiya ja sakta hai, aur yeh parameters le sakta hai, result return kar sakta hai, aur jab 
+            zarurat ho tab invoke (call) kiya ja sakta hai.
+
+
+Question : Why we Need Functions ?
+
+Answers  : Functions are important because they help in:
+
+1. Code Reusability : Once a function is written, it can be used multiple times without rewriting the same code, saving time and effort.
+2. Modularity : Functions break down complex tasks into smaller, manageable parts, making the code easier to understand and maintain.
+3. Avoiding Redundancy : By using functions, you avoid repeating the same logic or code in different parts of your program.
+4. Maintainability: It’s easier to debug or update code when it's organized into functions, since changes are isolated to 
+                    specific parts of the program.
+5. Abstraction : Functions allow you to hide complex logic inside, making your code cleaner and easier to read.
+
+
+# Function ke andar jo input hota hai use hum Parameter Kehte hai.
+# The Parameter of Function they are as like local Variables of function and they have block space.
+  { Function ke andar hi sirf valid hote hai }
+
+
+EXAMPLE : A simple function which was printing the name .
+           
+
+
+                                         function myUserName() {
+                                              console.log("k")
+                                              console.log("R")
+                                              console.log("I")
+                                              console.log("S")
+                                              console.log("H")
+                                              console.log("N")
+                                              console.log("A")
+                                                }
+
+                                                  ___________> Execution
+                                                 |           
+                                            myUserName()    
+                                                |
+                                        Function Reference
+
+
+# Function ko Call Karte Samay jo bhi hum Pass krte hai use hum Arguments bolte hai.
+
+

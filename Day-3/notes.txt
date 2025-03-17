@@ -30,11 +30,19 @@ For finding the length of the String :{ str.length } Shold be used.
  2.toLowerCase() : for Conversion into LowerCase.
  3.trim() : remove White Spaces.
  4.Slice(start,end). // It gives a value with the perfect index values.
- 5.Concat(str1,str2). // JOin String 2 with string 1.
+ 5.Concat(str1,str2). // Join String 2 with string 1.
  6.Replace(searchVAl,newVAl). // Adds A new Value in the Place of Previous Value.
- 7.CharAt(idx). // This GIves A Value Of Particular Index.
- 8.includes() :  give us a true/false statement that we actually find is that he allocate or not.
+                                 First make new String Doent chnge in previous String. ONly First Occurance Change.
+ 7.CharAt(idx). // This Gives A Value Of Particular Index.
+ 8.includes() :  give us a true/false statement that we actually find is that he allocate or not. Means Present in the String or Not.
  9. Split() : us Particular Words se strign TUt jayegi har baar
  10.length : it was Used To Count the VAlue Of The Length.
+ 11.ReplaceAll() : Saare Cheejo ko Chnge Krega Iss ME.
+
  # Strings are Immutable in Java-Script. They Cannot be Changed.
+
+
+Break : break loop ko rokta hai. 
+Continue : Continue loop ko skip krta hai.
+ 
                                         
