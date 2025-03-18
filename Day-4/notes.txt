@@ -32,7 +32,7 @@ EXAMPLE : A simple function which was printing the name .
 
 
                                          function myUserName() {
-                                              console.log("k")
+                                              console.log("K")
                                               console.log("R")
                                               console.log("I")
                                               console.log("S")
@@ -51,3 +51,148 @@ EXAMPLE : A simple function which was printing the name .
 # Function ko Call Karte Samay jo bhi hum Pass krte hai use hum Arguments bolte hai.
 
 
+console.log("IMMEDIATELY WORKS")   /// THis code Works Immedialety in the console without calling the anything.
+
+// function Krishna(){
+//     console.log("Hello Guys")
+// }
+
+// Krishna()
+// Krishna()
+// Krishna()
+
+// Functiopns areStart doing their work whenever they were Called .
+
+
+WET- CODE : Writing Everything Twice.
+DRY- Code : Don't Repeat Yourself.
+
+
+
+DRY - RUN Of the Code IS The Another thing to run the code in the memmorize Way. IN Pen Or Paper.
+
+
+                                             /*    PARAMETER IN FUNCTIONS    /*
+
+  EXAMPLE : function greet(name){
+             console.log(name)
+                  }
+                                                         OUTPUT
+
+           greet('hEllo world')                       -  hello world
+           greet('hii')                               -  hii 
+           greet('byy')                               -  byy
+           greet('Krisnna')                           -  Krishna
+           greet('Singh')                             -  Singh
+
+
+
+
+# There Are 6 Types Of Functions 
+
+1. Function Statement :     function abcd(){              // This Pattern Called a function Statement.
+
+                                            }
+
+2. Function Expresion. :    Var abcd = function() =>{             // Function Expresion.
+
+                                                    }                                           
+
+
+3. Anonymous Function :     function() {
+                                                                   // function Anonymous.
+                                       }
+
+4. Fat Arrow Function :    const add () =>{               // Compact Way Of Writing a Function.
+   
+                                          }
+
+5. Fat Arrow With One Parameter :     let abcd = a =>{     // In this fat arrow function with ONe pArameter  you should remove the fat()
+                                       console.log(a)         from the function {Method} .
+                                                     }
+
+                                          abcd(12)
+
+6. Fat Arrow Function With Implicit Return : function abcd(){
+                                                   return 12;
+                                                             }
+
+# Fat Arrow Function With Implicit Return .  Apne App Return Krna Without Return KEyword.
+# Or jab humm krte hai toh vo explixit Return hota hai                                                            
+
+
+
+
+                                                /* REST PARAMETER  */
+
+ In JavaScript, the rest parameter allows you to collect all remaining arguments passed to a function into an array.
+ This can be especially useful when you're not sure how many arguments will be passed to a function. It provides a 
+ cleaner and more flexible way to handle variable numbers of arguments.
+
+ The rest parameter is represented by three dots (...) followed by a variable name in the function's parameter list.
+
+Syntax:   function myFunction(...rest) {
+                   console.log(rest);
+                               } 
+
+
+Example 1: Basic Usage of Rest Parameter :
+
+         function sum(...numbers) {
+        return numbers.reduce((total, num) => total + num, 0);
+               }
+
+              console.log(sum(1, 2, 3, 4));  // Output: 10
+              console.log(sum(5, 10));       // Output: 15
+
+Summary : Here, numbers is an array containing all the arguments passed to the sum function, and we use reduce to add them together.
+
+Example 2: Rest Parameter with Other Parameters :
+
+            function greet(greeting, ...names) {
+            console.log(greeting + " " + names.join(", "));
+            }
+
+            greet("Hello", "Alice", "Bob", "Charlie");
+           // Output: Hello Alice, Bob, Charlie
+
+Example 3: Rest Parameter with Destructuring  :
+
+             function displayInfo(name, age, ...hobbies) {
+             console.log(`Name: ${name}, Age: ${age}`);
+             console.log("Hobbies: " + hobbies.join(", "));
+             } 
+
+             displayInfo("John", 30, "Reading", "Cycling", "Traveling");
+             // Output:
+            // Name: John, Age: 30
+            // Hobbies: Reading, Cycling, Traveling
+
+
+
+ # Key Points to Remember:
+
+ 1. Rest parameters collect all remaining arguments into an array.
+ 2. It must always be the last parameter in the function signature.
+ 3. It can be used to handle functions with a variable number of arguments in a clean and flexible way.
+
+
+ Output : The rest parameter in JavaScript takes the remaining function arguments and collects them into an array.
+          So, the rest parameter always outputs an array (even if no extra arguments are passed).
+
+Output Format: The rest parameter will output an array containing those extra arguments.
+
+# EXAMPLE OF REST PARAMETER :
+
+function logMessages(...messages) {
+  console.log(messages);  // Output will be an empty array
+}
+
+logMessages("Hello");
+logMessages();
+
+
+
+    
+            
+                                              
