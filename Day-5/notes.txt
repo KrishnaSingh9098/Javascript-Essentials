@@ -1,0 +1,17 @@
+                                /* IIFE : IMMEDIATELY INvoked Function Execution */                
+
+Immedialety invoked Function Expression (iife) are JavaScripts Functions that are executed immediately.
+They are typically used to create a localScope for Variables to present them from polluting the global scope.
+
+Explanation : The Function is wrapped in paranthesis (function (){.....}) followed by () to immediately invoked it.
+
+Example : (function addTwo(){                                      First Paranthesis         
+            return num1+num2;                                       ^
+                        })                                          |
+          (Console.log(3+5)).                                      ( )                ( ) : Second Paranthesis
+                                                                    
+                                                          Function defination.         Function Execution
+
+
+ # Global scope ke pollution se problem hoti hai kai bar to usGlobal scope ke jo variable hai uske polution ko hatanre ke liye.
+ # This COuld also Works inn Arrow Functions.

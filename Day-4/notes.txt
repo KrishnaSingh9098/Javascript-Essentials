@@ -182,7 +182,9 @@ Example 3: Rest Parameter with Destructuring  :
 
 Output Format: The rest parameter will output an array containing those extra arguments.
 
-# EXAMPLE OF REST PARAMETER :
+# EXAMPLE OF REST PARAMETER :  ...Spread Operator
+
+#EXAMPLE : 1
 
 function logMessages(...messages) {
   console.log(messages);  // Output will be an empty array
@@ -190,6 +192,147 @@ function logMessages(...messages) {
 
 logMessages("Hello");
 logMessages();
+
+# EXAMPLE : 2
+
+function abcd(a,b,c,...rest){
+    console.log(a,b,c,rest)
+}
+
+abcd(1,2,3,4,5,6,7,8,9)
+
+
+
+
+                                                   /* HOISTING  */
+
+HOISTING refer to the process wherby the interpreter appear to move the declarations to the top of the code before execution.
+Variable Can thus be referred before they are declared in Javascript.
+
+Important Note : Javascript only hoist declaration not initialization. 
+
+Example : hello("Krishna")
+          function hello(){
+            ...           work!
+          }
+
+
+# HOISTING With Let ANd Var :
+
+Console.log(num)   -> Error with let or Const.
+                   -> with Var unDefined is Printed.
+
+1. Hoisting with var : When you declare a variable with var, it is hoisted to the top of its scope, but only the declaration is hoisted,
+                       not the initialization. As a result, if you try to access the variable before it’s initialized, it will return 
+                       undefined (not a ReferenceError).
+
+            Hinglish :  Hoisting with var ko samajhne ke liye, yeh samajhna zaroori hai ki jab aap variable declare karte ho var se, toh 
+                        sirf uska declaration (jo var likhne se hota hai) upar move ho jata hai, lekin initialization (value assign karna)
+                        upar nahi hoti. Iska matlab hai ki agar aap variable ko uske initialization ke pehle access karte ho, toh wo
+                        undefined dega, ReferenceError nahi.
+
+  Example : console.log(myVar); // undefined (kyunki declaration ho gaya hai lekin initialization nahi)
+            var myVar = 5;
+            console.log(myVar); // 5 (ab value assign ho gayi hai)
+
+  a. Jab aap var myVar = 5; likhte ho, toh JavaScript pehle var myVar; ko top par le jaata hai (hoisting) 
+     aur baad mein value 5 assign hoti hai.
+
+  b. Jab aap pehle console.log(myVar); likhte ho, toh variable myVar ka declaration ho chuka hota hai, 
+     lekin value assign nahi hui hoti, isliye undefined dikhega.   
+
+To summarize : var ke saath, declaration hoisting ke through upar chali jaati hai, lekin value assign karte waqt uski value undefined 
+               rahegi jab tak assignment nahi hoti.
+
+
+2. Hoisting with let and const : Jab aap variable ko let ya const se declare karte ho, toh wo variable block ke top par hoisted hota hai,
+                                 lekin wo ek "temporal dead zone" (TDZ) mein chala jaata hai. Yeh TDZ wo period hota hai jab tak us
+                                 variable ko initialize nahi kiya jaata. Matlab, jab tak aap us variable ko initialize nahi karte, 
+                                 aap usse access nahi kar sakte, aur agar karte ho, toh ReferenceError milega.  
+
+  Example:
+
+let ke saath :   console.log(myLet); // ReferenceError: Cannot access 'myLet' before initialization
+                 let myLet = 10;
+                 console.log(myLet); // 10
+
+const ke saath : console.log(myConst); // ReferenceError: Cannot access 'myConst' before initialization
+                 const myConst = 20;
+                 console.log(myConst); // 20
+
+Explanation : 1. Jab aap let ya const se variable declare karte ho, toh wo hoisted hota hai, lekin initialization 
+                 ke liye usko TDZ mein rakh diya jaata hai.
+              2. Agar aap usse initialization se pehle access karte ho, toh JavaScript aapko ReferenceError dega kyunki
+                 variable ko abhi tak initialize nahi kiya gaya hai.
+
+To summarize : let aur const ke saath, variable hoisted hota hai lekin initialization se pehle usse access karna allowed nahi hota.
+               Agar aap karte ho, toh ReferenceError milega.
+
+
+
+                                                  TDZ (Temporal Dead Zone) kya hota hai?
+
+  Jab aap JavaScript mein let ya const ka use karte ho, toh variable block scope mein hoisted hota hai, lekin wo ek temporal dead 
+  zone mein chala jaata hai. Yeh temporal dead zone ek aise period ko refer karta hai jab tak variable ko initialize nahi kiya gaya,
+   uss time tak us variable ko access karna allowed nahi hota.
+
+TDZ ka matlab hai ki aap variable ko uski declaration se pehle access nahi kar sakte, chahe wo hoisted ho chuka ho. Agar aap aise access
+ karne ki koshish karte ho, toh JavaScript aapko ReferenceError dega.
+
+
+TDZ ka kaam: Jab let ya const se variable declare kiya jaata hai, toh wo hoisted hota hai lekin uski actual initialization 
+             ke pehle wo ek dead zone mein hota hai.
+             Is dead zone mein variable "exist" karta hai, lekin usse access karne ki koshish karne pe ReferenceError milega.
+
+Example : console.log(myVar); // ReferenceError: Cannot access 'myVar' before initialization
+          let myVar = 10;
+
+TDZ ka behavior: 1. Hoisting: Variable hoisted ho jaata hai.
+                 2. TDZ: Variable ko initialize hone tak access nahi kiya jaa sakta.
+                 3. Accessing before initialization: Agar aap variable ko initialize hone se pehle access karte ho, 
+                    toh ReferenceError milta hai.
+
+To summarize :TDZ is the time between the start of the block and the line where the let or const variable is initialized.
+              During this time, accessing the variable will result in a ReferenceError.
+
+
+
+
+ : Function Expression and class Expresion are not hiosted.
+ # HOISTING is (to many developers) an unknown or overlooked behaviour of JavaScript.
+   If a developer does not understand hoisting programs may contains bugs(error).
+
+   To avoid bug always declare all variables at the beginnig of every scope.
+   Since how this is Java-Script interepts the code,It is always a good Rule.
+
+
+
+ # SPREAD OPERATOR : HOld The Previous Value of Array.
+   Example : let num = [1, 2, 3, 4, 5, 6];  // Initial array
+             num = [...num, 7, 8, 9];  // Using the spread operator to add elements to the array
+             console.log(num);
+
+
+Spread Operator Explanation : In the code above, the spread operator (...) is used to unpack the elements of the existing num array
+                              and append 7, 8, and 9 to it. The result is a new array that contains all the original elements plus the 
+                              new ones.
+
+
+When you pass an array to Math.max() or Math.min() directly, it won't work as you might expect. This is because Math.max() 
+and Math.min() expect individual arguments, not an array.           
+
+Example with an array : const arr = [1, 2, 3, 4, 5];
+                        console.log(Math.max(arr)); // NaN
+                        console.log(Math.min(arr)); // NaN
+
+Why does this happen? : Math.max() and Math.min() do not accept an array directly. They expect separate arguments, like this:
+
+1. Without spreading (Math.max(arr)): It gives NaN because Math.max() expects individual numbers, not an array.
+2. With spreading (Math.max(...arr)): It works correctly, finding the maximum or minimum by unpacking the array's
+    values as individual arguments.
+
+
+
 
 
 
