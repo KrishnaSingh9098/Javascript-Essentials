@@ -1,4 +1,4 @@
-                                /* IIFE : IMMEDIATELY INvoked Function Execution */                
+                                /* IIFE : IMMEDIATELY Invoked Function Execution */                
 
 Immedialety invoked Function Expression (iife) are JavaScripts Functions that are executed immediately.
 They are typically used to create a localScope for Variables to present them from polluting the global scope.
@@ -15,3 +15,277 @@ Example : (function addTwo(){                                      First Paranth
 
  # Global scope ke pollution se problem hoti hai kai bar to usGlobal scope ke jo variable hai uske polution ko hatanre ke liye.
  # This COuld also Works inn Arrow Functions.
+
+
+
+ Example :  // Here, we're defining a variable `ans` and assigning it the result of an IIFE (Immediately Invoked Function Expression).
+            let ans = (function abcd() {
+           // Inside the IIFE, we define a local variable `a` with the initial value of 12.
+           var a = 12;
+ 
+          // The function returns an object with two methods: `set` and `get`.
+          return {
+          // `set` method: It accepts a parameter `val` and assigns it to the variable `a`.
+          set: function(val) {
+          a = val; // This updates the value of `a` to whatever value is passed to `set()`.
+          },
+          // `get` method: It logs the current value of `a` to the console.
+          get: function() {
+          console.log(a); // This prints the current value of `a` to the console.
+         },
+         };
+         })();
+
+// The `set` method is now called with the argument `"32"`, which will change the value of `a` to "32".
+ans.set("32");
+
+// Now, the `get` method is called. It will print the current value of `a`, which is now `"32"`.
+ans.get(); // Output: "32"
+
+
+# Some Examples BAsed ON IIFE ARE also in the Script.js File.
+
+                                /* Higher Order Functions  */
+
+A Higher-Order Function in JavaScript (or in any functional programming language) is a function that:
+
+1. Takes one or more functions as arguments.
+2. Returns a function as a result (or returns a function inside it).
+
+In other words, higher-order functions can either take functions as inputs, return functions as outputs, or both.
+
+
+HInglish : HIgher Order functions vo functions hote hai jo dusre functions ko Ya toh as a parameter lete hai,
+           Kisis dusre func ko as a parameter use kr rhe hote hai; Ya to return kr rhe hote hai.
+
+
+
+This concept allows for greater flexibility and expressiveness in your code.
+Higher-order functions are common in JavaScript, especially when working with array methods like .map(), .filter(), and .reduce().
+
+
+Example 1: A Higher-Order Function that takes a function as an argument:
+
+// Defining a function `greetUser` which takes two parameters:
+// 1. `name` (a string) 
+// 2. `greetFunction` (a function that will be called inside `greetUser`)
+function greetUser(name, greetFunction) {
+  // Inside the `greetUser` function, we call the passed `greetFunction` with the `name` as an argument.
+  // This allows the flexibility of using different greeting functions.
+  return greetFunction(name); // It calls `greetFunction` with `name` and returns the result.
+}
+
+// Defining a function `sayHello` which takes `name` as an argument and returns a greeting string.
+function sayHello(name) {
+  // The `sayHello` function simply returns a greeting message by concatenating "Hello, " with the `name`.
+  return "Hello, " + name; // For example, if `name` is "Alice", it will return "Hello, Alice".
+}
+
+// Calling the `greetUser` function with the arguments "Alice" and the `sayHello` function.
+// Here, `sayHello` is passed as the second argument to `greetUser`.
+console.log(greetUser("Alice", sayHello)); // Output: "Hello, Alice"
+
+
+a. Here, greetUser is a higher-order function because it takes another function (sayHello) as an argument and calls it inside.
+b. sayHello is a simple function that is passed into greetUser.
+
+
+
+
+
+Example 2: A Higher-Order Function that returns a function:
+
+function multiplier(factor) {
+  return function(number) {
+    return number * factor;
+  };
+}
+
+const double = multiplier(2); // Returns a function that doubles the input
+console.log(double(5)); // Output: 10
+
+const triple = multiplier(3); // Returns a function that triples the input
+console.log(triple(5)); // Output: 15
+
+
+
+                                               /* CallBAck Function  */
+
+ # Kisi function me jo function pass hote hai call krte waqt usey CallBack function kahte hai.
+ # Agar ek Function mein parameter mein tumhe function pass kiya jo pass kiya wo hai CallBack and Jismein pass kiya hai vo hai hofs.
+
+
+
+
+                                               // First Class Funtion  //
+
+
+  First Class Function : first class fnc ek darja hai jo ki js mein fncs ko mila hai, is darje mein kaha jata hai ki Functions
+  ko aap value ki tarah use kr skte ho.
+
+  # JavaScript me Functions First clas hi HAi.   {Means You can also use as Function.}
+
+
+  Another Defination : In JavaScript, first-class functions means that functions are treated as first-class citizens.
+                       This implies that functions can:
+
+                       1. Be assigned to variables. {  Functions ko variables mein store kiya ja sakta hai. }
+                       2. Be passed as arguments to other functions. {Functions ko arguments ke roop mein doosri functions ko diya ja sakta hai.}
+                       3. Be returned from other functions. {Functions ko return kiya ja sakta hai doosri functions se.}
+                       4. Be stored in arrays, objects, or other data structures.
+                       {Functions ko arrays, objects, ya kisi aur data structure mein store kiya ja sakta hai.}
+                                       
+                       In other words, functions in JavaScript can be used like any other value (such as numbers, strings, or objects).
+
+
+Example :  // Function ko variable mein assign karna
+             const greet = function(name) {
+             return `Hello, ${name}!`;
+             };
+
+           // Function ko argument ke roop mein pass karna
+             function callFunction(fn) {
+             return fn("Alice");
+             }
+
+            console.log(callFunction(greet));  // Output: Hello, Alice!
+
+
+
+
+
+                                           /* Pure Function  */
+
+A pure function is a function that meets the following criteria: {Does not Modify any External State}
+
+Deterministic: For the same input, it always returns the same output. There is no randomness or change in output for the same input.
+
+No Side Effects: It does not modify any external state or variables (like changing a global variable or modifying an object outside
+the function). It only uses the input provided to calculate the output.
+
+For example:   function add(a, b) {
+                 return a + b;
+                  }
+
+This function is pure because:
+
+1. It always returns the same output for the same inputs.
+
+2. It does not modify any external state.
+
+                                          
+                                                     /* ImPure Function  */
+
+ IMPURE FUNCTION : An impure function is a function that does not meet the criteria of a pure function.
+                   It has one or more of the following characteristics:
+
+1. Non-deterministic: It may return different outputs for the same input, depending on external factors like random values or data
+                      from an external source.
+
+2. Side Effects: It may modify variables or data outside of the function or have other side effects, such as changing the state of 
+                 a global variable or logging something to the console.
+
+ Example of an impure function : let counter = 0;
+
+                                 function incrementCounter() {
+                                 counter += 1;  // modifies external state
+                                 return counter;
+                                 }
+
+
+Another Example : let total = 0;
+                  function addTotal(a){
+                    total +=a;   // Modifies the external Variable.
+                  }
+                  addTotal(5)
+                  console.log(total)  // 5
+
+ # Global Scope : A variable declared in the global scope is accessible throughout the entire program.
+                  That means it can be accessed from any part of the code.
+                  
+                  In JavaScript, global variables are usually declared outside any function or block.
+
+ #HInglish : Global scope ka matlab hai ki agar aapne koi variable bahar declare kiya hai, toh woh variable
+             aapke poore code mein kahin bhi accessible hoga.
+
+             Jaise globalVar ko humne function ke andar ya bahar dono jagah use kiya.
+
+
+Example : let globalVar = "I am a global variable";
+
+          function showGlobalVar() {
+          console.log(globalVar); // Can access the global variable here
+          }
+
+showGlobalVar(); // Output: I am a global variable
+console.log(globalVar); // Output: I am a global variable
+
+
+ # LOCAL SCOPE : A local scope refers to the scope inside a function or block. A variable declared inside a function 
+                 or block is local to that function/block and can only be accessed within that specific scope.
+
+ # Hinglish Explanation: Local scope ka matlab hai ki jo variable aapne function ke andar declare kiya hai, woh variable 
+                         sirf usi function ke andar accessible hoga, baahar nahi.
+
+ Imp POINT : Jaise localVar ko hum function ke andar access kar rahe hain, lekin function ke bahar use nahi kar sakte.
+ What ERROR IT SHOWS : script.js:249 Uncaught ReferenceError: localVar is not defined.
+
+ EXAMPLE : function localScopeExample() {
+           let localVar = "I am a local variable";
+           console.log(localVar); // Can access localVar inside the function
+           }
+
+localScopeExample(); // Output: I am a local variable
+console.log(localVar); // Error: localVar is not defined
+
+
+# FUNCTIONAL SCOPE :  A function scope refers specifically to variables declared inside a function using var. 
+                      These variables are only accessible within the function in which they are declared. var 
+                      is function-scoped, meaning it is confined to the function block.
+
+# Hinglish Explanation : Function scope ka matlab hai ki jab aap var use karte ho, toh jo variable aap function ke andar 
+                         declare karte ho, woh sirf usi function ke andar accessible hota hai.                     
+
+                         functionScopedVar ko sirf function ke andar use kar sakte hain, bahar nahi.
+
+ Example : function functionScopeExample() {
+           var functionScopedVar = "I am function-scoped";
+           console.log(functionScopedVar); // Can access functionScopedVar inside the function
+           }
+
+functionScopeExample(); // Output: I am function-scoped
+console.log(functionScopedVar); // Error: functionScopedVar is not defined
+
+
+ # BLOCK SCOPE : Block Scope in javascript refers to the visibility of variablbes in functions within a block of code.
+                 A block of code is a group of statement that are enclosed in curly braces ({ }).
+                 Variables and Functions declared in a  block's Scope are only Visible within that block.
+
+ # Hinglish Explanation : Block scope ka matlab hai ki jab aap let ya const se koi variable declare karte ho, toh woh variable sirf us
+                          block (jaise if, for loops) ke andar accessible hota hai, bahar nahi.   
+
+                          Jaise blockScopedVar ko hum sirf block ke andar use kar rahe hain, baahar error milega.
+
+ EXAMPLE : if (true) {
+           let blockScopedVar = "I am block-scoped";
+           console.log(blockScopedVar); // Can access blockScopedVar inside the block
+           }
+
+console.log(blockScopedVar); // Error: blockScopedVar is not defined
+
+
+Key Differences:
+
+  s.no     Scope Type                 Variable Declaration                       Accessibility
+   
+  1.      Global Scope                var, let, const (outside functions)        Accessible anywhere in the program
+  2.      Local Scope                 var, let, const (inside a function)        Accessible only inside the function/block  
+  3.      Function Scope              var                                        Accessible only inside the function
+  4.      Block Scope                 let, const                                 Accessible only inside the block (e.g., loop or conditional)
+  
+
+ IN SUMMARY : 
+ 1. Global Scope: Accessible everywhere.
+ 2. Local Scope: Accessible only inside a function/block.
+ 3. Function Scope: Specifically for var, accessible only within the function.    
+ 4. Block Scope: Specific to let and const, accessible only within the block (like inside if or for loops). 
