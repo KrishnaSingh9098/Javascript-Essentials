@@ -129,7 +129,7 @@ console.log(x);          // OUTPUT : 20,10
 
 // HIgher Order Function
 console.log("Higher Order Function Started :")
-console.log("Ek aisa function jo yaa toh return kare function nahi toh accept kare function in parameter, Ya fi dono")
+console.log("Ek aisa function jo yaa toh return kare function nahi toh accept kare function in parameter, Ya fir dono")
 console.log("Yha Function return kar rha hai")
 // function abcd(){
 //   return function (){
@@ -240,13 +240,57 @@ console.log(globalVar); // Output: I am a global variable
 
 // Local Scope : 
 
-function localScopeExample() {
-  let localVar = "I am a local variable";
-  console.log(localVar); // Can access localVar inside the function
-}
+// function localScopeExample() {
+//   let localVar = "I am a local variable";
+//   console.log(localVar); // Can access localVar inside the function
+// }
 
-localScopeExample(); // Output: I am a local variable
-console.log(localVar); // Error: localVar is not defined
+// localScopeExample(); // Output: I am a local variable
+// console.log(localVar); // Error: localVar is not defined
 
 
 // Functional Scope : 
+
+
+// function operate(a,b,operation){
+//   return operation(a,b);
+// }
+
+// function add(a,b){
+//   return a+b
+// }
+
+// console.log(operate(5,6,add))
+
+
+
+function greet(name){
+  return function(message){
+    console.log(`${message},${name}`)
+  }
+}
+
+let greetfn = greet("vishva")
+greetfn("Hello")
+
+
+
+
+
+// ARRAY_HOFS 
+
+// 1. MAP FUNCTION : 
+
+const nums = [1,2,3,4,5]  //EACh element Transformation
+const res = nums.map(nums => nums*nums)
+console.log(res)
+
+// 2. Filter Function : 
+
+const res1 =nums.filter(nums => nums%2==0)
+console.log(res1)
+
+// 3. REDUCE FUNCTION : AGGREGATE METHOD: 
+
+  const res2 = nums.reduce((acc,num )=> acc+num,0)
+  console.log(res2)

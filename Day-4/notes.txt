@@ -88,7 +88,7 @@ DRY - RUN Of the Code IS The Another thing to run the code in the memmorize Way.
 
 
 
-# There Are 6 Types Of Functions 
+# There Are 6 Types Of Functions : 
 
 1. Function Statement :     function abcd(){              // This Pattern Called a function Statement.
 
@@ -191,7 +191,7 @@ function logMessages(...messages) {
 }
 
 logMessages("Hello");
-logMessages();
+logMessages();            //  Gives Empty Array 
 
 # EXAMPLE : 2
 
@@ -202,6 +202,20 @@ function abcd(a,b,c,...rest){
 abcd(1,2,3,4,5,6,7,8,9)
 
 
+#  You Cannot add a Any Parameter after a REST parameter. It Could Through Error.
+
+// Example :            function sums(...nums,a){     // OUTPUT : SyntaxError: Rest parameter must be last formal parameter
+                                 console.log(a)                           
+                              console.log(nums)                       
+                           console.log(...nums)                    
+                             }
+
+                              sums(1,2,3,4,5)
+
+
+
+
+# Jis Function me Hum return Keyword Use nhi krte hai Usme me Vo Function Undefined Return Krta Hai.
 
 
                                                    /* HOISTING  */
@@ -332,6 +346,37 @@ Why does this happen? : Math.max() and Math.min() do not accept an array directl
     values as individual arguments.
 
 
+# In this function test() they have a by default global Object, Which stores Arguments.
+
+
+function test(){
+    console.log(arguments)           // OUTPUT : [Arguments] { '0': 1, '1': 'Hello' }
+    console.log(arguments[1])         // OUTPUT: 'Hello'
+    console.log("Inside Text")       // OUTPUT : Inside Text
+}
+
+test(1,"Hello")
+
+
+# Something More About Arrow Functions : 
+
+1. Arrow Function With No Parameter:  
+
+const greet=()=>{console.log("HEllo Js")}
+greet()
+
+
+2. Arrow Function With  Parameter: 
+
+const add = (num1,num2) => num1+num2;   // if You Writing a code in a same line there was a no need of return Statement by Explicitly
+
+3. Multiple Line Arrow Functions : 
+
+const multiply = (length,breadth) =>{
+  a=length*breadth;
+  return a;
+}
+   
 
 
 

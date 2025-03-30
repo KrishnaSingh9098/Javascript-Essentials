@@ -137,18 +137,137 @@
 
 
 
-let num = [1, 2, 3, 4, 5, 6];  // Initial array
-num = [...num, 7, 8, 9];  // Using the spread operator to add elements to the array
-console.log(num);
+// let num = [1, 2, 3, 4, 5, 6];  // Initial array
+// num = [...num, 7, 8, 9];  // Using the spread operator to add elements to the array
+// console.log(num);
 
 
-let a = Math.max(...num)
-console.log(a)
+// let a = Math.max(...num)
+// console.log(a)
 
-let b = Math.min(...num)
-console.log(b)
+// let b = Math.min(...num)
+// console.log(b)
   
 
+// function sums(...nums){
+//     console.log(nums)                       // Treated as like a Array
+//     console.log(...nums)                    // Treated as like a single values
+// }
 
+// sums(1,2,3,4,5)
+
+
+// function sums(a,...nums){
+//     console.log(a)                           // a holds the value : 1
+//     console.log(nums)                       // Treated as like a Array
+//     console.log(...nums)                    // Treated as like a single values
+// }
+
+// sums(1,2,3,4,5)
+
+// You Cannot add a Any Parameter after a REST parameter. It Could Through Error.
+// Example :            
+
+function sums(a,...nums){
+    console.log(a)                           
+    console.log(nums)                       
+    console.log(...nums)                    
+}
+
+sums(1,2,3,4,5)
+
+
+
+function logMessages(...messages) {
+    console.log(messages);  // Output will be an empty array
+  }
+  
+  logMessages("Hello");
+  logMessages();
+
+
+
+  function sums(a,...nums){
+    console.log(a)                           
+    console.log(nums)                       
+    console.log(...nums)  
+    let sum = 0;
+for(let i=0;i<nums.length;i++){
+    sum+=nums[i];
+   
+}  
+return sum;                
+}
+
+
+let c = sums(1,2,3,4,5)
+console.log(c)
+
+
+function test(){
+    console.log(arguments)
+    console.log(arguments[1]) 
+    console.log("Inside Text")
+}
+
+test(1,"Hello")
+
+
+// ADvanced Syntacticall Sugar
+  
+// const add = (x, y) => x + y;
+
+// console.log(add())
+// console.log(add(45,5))
+
+
+// # Something More About Arrow Functions : 
+
+// 1. Arrow Function With No Parameter: 
+
+const greet=()=>{console.log("HEllo Js")}
+greet()
+
+// 2. Arrow Function With  Parameter: 
+
+const add = (num1,num2) => num1+num2;   // if You Writing a code in a same line there was a no need of return Statement by Explicitly
+
+// 3. Multiple Line Arrow Functions : 
+
+const multiply = (length,breadth) =>{
+     a=length*breadth;
+    return a;
+  }
+
+  console.log(multiply(4,5))
+     
 
  
+
+//   let aread = (length,breadth)=>{
+//     console.log(arguments)   // Shouldn't be available on browser it could shows not defined. But in Node js Environment it was available.
+//     return length*breadth
+//   }
+
+//   console.log(aread())
+
+
+
+  let arr = [10,20,30,40]
+  console.log(arr.slice(1,3))
+
+  let ker = [5,10,1,25]
+  ker.sort()
+  console.log(ker)
+
+  var a = [1,2,2,3,4,4,5]
+  var b = [...new Set(a)]
+  console.log(b)
+
+  let arr3 = [1,2,3,4,5]
+  let reversed = 0;
+  for(let i=arr3.length-1;i>=0;i--){
+    reversed.push(arr3[i])
+  }
+
+  console.log(reversed)

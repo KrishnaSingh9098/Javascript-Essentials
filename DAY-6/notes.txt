@@ -1,0 +1,267 @@
+                                             
+                                         /* ARRAYS IN JAVASCRIPT  */ arrays are described as a way to store multiple 
+                                                                     items in a single variable.
+
+ARRAYS : In JavaScript, arrays are used to store multiple values in a single variable. They are special variables that can hold
+         a collection of items, such as numbers, strings, objects, and even other arrays. Arrays are ordered, meaning each item
+         in the array has a specific position or index, and the first item has an index of 0. Zero-Based indexing works.
+         This is also a Data Structure.
+HINGLISH : JavaScript mein arrays ek aise special variable hote hain jisme aap multiple values ko ek saath store kar sakte hain.
+           Yeh values kisi bhi type ki ho sakti hain, jaise numbers, strings, objects, ya phir arrays bhi. Arrays mein items ek 
+           specific order mein hote hain, aur pehla item ka index 0 hota hai.
+
+Example : let fruits = ['Apple', 'Banana', 'Cherry'];   Array is basically Described in thid paranthesus as like [].
+
+
+CONSTRUCTOR IN Array : In JavaScript, a constructor is a special function used to create and initialize objects. For arrays,
+                       the Array constructor is used to create an instance of an array.
+
+You can use the Array constructor in two ways :
+
+1.  Creating an Empty Array :  If you call the Array constructor with no arguments, it creates an empty array.
+    
+ Example : let emptyArray = new Array();
+           console.log(emptyArray); // Output: []
+
+2.  Creating an Array with a Specific Length : If you pass a single numeric argument to the Array constructor, 
+                                               it creates an array with that specific length, but without elements initialized.
+
+ Example : let arr = new Array(5);  // Array with 5 empty slots
+           console.log(arr);  // Output: [ <5 empty items> ]
+
+3. Creating an Array with Specific Elements : If you pass multiple values as arguments, the Array constructor will 
+                                              create an array with those values.
+                  
+Example :   let fruits = new Array('Apple', 'Banana', 'Cherry');
+            console.log(fruits);  // Output: ['Apple', 'Banana', 'Cherry']
+
+In summary : the Array constructor is a way to create arrays with either specific lengths or specific elements. 
+             The key difference lies in how you use the arguments you pass to it.
+
+# IN JavaScript array is arrays but if we are going to check this data Type they Give us an Object{}.
+
+# Some Important Things About Array : 
+
+1. Who Uses Arrays? :
+
+ ANSWER : Developers: Any JavaScript developer (front-end, back-end, full-stack) uses arrays to store and manage data.
+          Arrays are an essential data structure in JavaScript for manipulating and accessing collections of data.
+
+          Programmers: In general, anyone writing code in JavaScript (or any language that supports arrays) uses arrays to simplify
+                       data handling tasks.
+
+2. When to Use Arrays? : You should use arrays in situations where:
+
+a. You need to store multiple items: Arrays are ideal when you want to store a collection of items (numbers, strings, objects, etc.) 
+                                     in a single variable.
+
+   Example: Storing a list of user names, items in a shopping cart, or a set of numbers.
+
+b. When the order of items matters: Arrays maintain the order of their elements, so if you need to access or manipulate items in 
+                                    a specific sequence, arrays are perfect.
+
+   Example: A playlist of songs, where the order matters.
+
+c. When you need to loop through the data: Arrays are very useful when you need to perform operations on each element in a collection,
+                                           as they provide easy iteration with loops (for, forEach, etc.).
+
+   Example: Processing all users in a list, checking if any values meet a specific condition.
+
+3. Where to Use Arrays ? : 
+
+a. In Data Storage: When you need to store a collection of similar items, like a list of student names, customer orders,
+                    or product details.
+
+           Example: A list of products on an e-commerce website, an array of numbers for a mathematical calculation.
+
+b. In Algorithms: When you need to solve problems like sorting, searching, or manipulating data, arrays are often used to store 
+                  temporary or permanent data.
+
+         Example: Sorting a list of numbers, finding the largest number in an array, or implementing a search algorithm.
+
+c. In UI/UX: Arrays are commonly used in front-end development when displaying dynamic lists of items or data, like lists of items
+             in a to-do app or a gallery of images.
+
+    Example: An array of user comments displayed on a webpage.
+                                                                                                     Iterable
+                                                                                                        |
+# Arrays Are not Immutable in Javascript Thye are mutable.                                           Strings
+                                                                                                        |
+                                                                                                     Objects
+                                                                                                        |
+                                                                                                     ARRAYS   
+
+# If you are finding a value which never exist in array it gives you Undefined.
+
+                                            /* Second Way Of Making Array */
+
+ler arr = new Array()                             // Array constructor with no argument
+
+let arr = [1,2,3,4,5]
+console.log(arr[1])               // Output : Undefined
+
+let arrr = new Array(30)
+console.log(arrr)
+arrr[0] = 12
+arrr[1] = 22
+arrr[2] = 32
+arrr[3] = 42
+arrr[4] = 52
+
+console.log(arrr)
+
+console.log(arrr.length)
+
+for(var i=0;i<30;i++){
+    arrr[i]=i;   // The loop Start from the 0 and ends at the 100 But loop first goes throw 29 i<30 then when it comes to 
+}                // print it  prints value from one to 29 and then empty array .
+console.log(arrr)  // Prints the loop values as  well as the another values.
+
+
+
+# In all languages Arrays are Homogeneous But in JavaScript array are not homogeneous.
+
+ Example : let arr = [1,2.4,3,"Krishna",true, function (){}]
+
+
+
+
+-----------------------------------------------// OBJECTS IN JAVASCRIPT //--------------------------------------------------------
+
+Question 1.: What is Object ?
+
+Answer : An object in JavaScript is a data structure used to store collections of data in the form of key-value pairs.
+         Each key (also called a property) is a string, and the corresponding value can be any type of data: number,
+         string, array, or even another object.
+
+Hinglish: JavaScript mein object ek data structure hai jo key-value pairs ke form mein data ko store karta hai. 
+          Har key (jo property kehlata hai) ek string hota hai, aur uske saath jo value hoti hai, wo koi bhi data 
+          type ho sakti hai—number, string, array, ya phir ek aur object.
+
+Question 2.: Why use Objects ? 
+
+Answer : Objects help organize related data together. They allow you to group properties and methods (functions) that belong
+         to a particular entity, making your code more readable and maintainable. Instead of having many individual variables,
+         you can store them in an object to keep your code neat.
+
+Hinglish: Objects ka use hum isliye karte hain taaki hum related data ko ek saath organize kar sakein. Wo properties aur methods
+          (functions) ko ek specific entity ke under rakhte hain, jo humare code ko zyada readable aur maintainable bana deta hai.
+           Agar humare paas bahut saare variables hain, to unhe ek object ke andar rakhke hum apne code ko clean rakh sakte hain.
+
+Question 3.: How to Create an Object ?   
+
+Answer : There are several ways to create objects in JavaScript :
+
+      1. Using Object Literal Syntax :    let car = {                       // This could be known as Non-Singleton Object
+                                              make: "Toyota",
+                                              model: "Corolla",
+                                              year: 2020,
+                                              color: "red"
+                                             };
+
+      2. Using the new Object() Constructor :   let car = new Object(); // Thos could also Known as the Singleton Object.
+                                                car.make = "Toyota";
+                                                car.model = "Corolla";
+                                                car.year = 2020;
+                                                car.color = "red";
+                                                
+      3. Using a Constructor Function:  function Car(make, model, year, color) {
+                                                 this.make = make;
+                                                 this.model = model;
+                                                 this.year = year;
+                                                 this.color = color;
+                                              }
+
+                                        let myCar = new Car("Toyota", "Corolla", 2020, "red");
+                                        console.log(myCar)
+
+Example - Multiple Instances (Car Objects):
+     
+      function Car(make, model, year) {
+    this.make = make;
+    this.model = model;
+    this.year = year;
+}
+
+const car1 = new Car("Toyota", "Corolla", 2020);
+const car2 = new Car("Honda", "Civic", 2022);
+
+console.log(car1);  // Output: Car { make: 'Toyota', model: 'Corolla', year: 2020 }
+console.log(car2);  // Output: Car { make: 'Honda', model: 'Civic', year: 2022 }
+console.log(car1 === car2);  // Output: false (different instances)
+
+
+# Multiple instances ka use tab hota hai jab aapko alag-alag objects ki zarurat hoti hai, jinke apne-apne properties 
+  aur behaviors ho. Har instance apne state ke saath independent hota hai.
+
+#  Use Case Kab Hota Hai:
+
+1. Car objects: Jab aapko different cars ko represent karna ho, jaise har car ki apni make, model, aur color ho.
+
+2. User objects: Jab aapko different users ke liye data store karna ho, jaise har user ka naam, age, email, etc.
+
+3. Product objects: Jab aapko products ke alag-alag attributes ke saath store karna ho, jaise har product ka price,
+   stock quantity, category, etc.
+
+
+# SUMMARY : 1. Singleton: Jab ek hi instance chahiye, jise globally access kiya jaa sake. Use cases mein global configuration, 
+               database connection, aur logging system shamil hain.
+
+            2. Multiple Instances: Jab multiple objects chahiye, jinke apne properties aur behaviors ho, jaise users, cars, products, etc.
+            
+            # Toh, aapko singleton ya multiple instances ka use kab karna hai ?
+            1.Singleton ka use un cases mein hota hai jab aapko sirf ek hi object ki zarurat ho aur woh object har part mein use ho.
+            2.Multiple instances ka use un cases mein hota hai jab aapko alag-alag independent objects chahiye hon jo apne-apne data 
+              aur behavior ke saath kaam karein.
+
+                                         
+
+
+Question 4.: How to Access an Object ?
+
+Answer : There are two main ways to access properties in an object:
+
+       1. Dot Notation: let car = {
+                        make: "Toyota",
+                        model: "Corolla",
+                        year: 2020,
+                        color: "red"
+                    };
+
+                    console.log(car.make);  // Output: Toyota
+                    console.log(car.year);  // Output: 2020
+                    
+
+      2. Bracket Notation : let car = {
+                                make: "Toyota",
+                                model: "Corolla",
+                                year: 2020,
+                                color: "red"
+                            };
+
+                            console.log(car["make"]);  // Output: Toyota
+                            console.log(car["year"]);  // Output: 2020
+
+Question 5.: Example of Using an Object :  
+ 
+  let person = {
+    name: "John",
+    age: 30,
+    greet: function() {
+        console.log("Hello, " + this.name);
+    }
+};
+
+console.log(person.name);  // Output: John
+person.greet();            // Output: Hello, John
+
+
+# Summary : 1.What: Objects in JavaScript are collections of key-value pairs used to store related data.
+            2.Why: They organize data, making your code cleaner and easier to manage.
+            3.When: Use an object when you have multiple related properties to store.
+            4.How to Create: Objects can be created using literals, constructors, or functions.
+            5.How to Access: You can access object properties using dot notation or bracket notation.
+
+
+                            
+ 

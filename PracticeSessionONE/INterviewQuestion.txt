@@ -1,0 +1,21 @@
+--------------------------------------------------INTERVIEW QUESTION------------------------------------------------------------
+
+QUESTION 1: Interview Question: What does the following JavaScript code output, and why does it behave this way ?
+     CODE : console.log(typeof(null));
+
+Answer :One-liner Answer: The output is "object" because, in JavaScript, null is historically considered an object type due 
+        to a bug in the language's early versions, which was never corrected for backward compatibility.
+
+        This behavior can be surprising, but it's important to remember that null is a primitive value that signifies "no value" 
+        or "no object." Despite this, the typeof operator incorrectly returns "object" for null due to the way the JavaScript engine
+        was designed.
+
+ HINGLISH : The output is "object" because JavaScript mein null ko pehle ek object type consider kiya gaya tha due to a bug in early
+            versions, jo backward compatibility ke liye fix nahi kiya gaya.
+
+            Yeh behavior thoda surprising ho sakta hai, lekin yaad rakhna chahiye ki null ek primitive value hai jo "no value" ya 
+            "no object" ko signify karta hai. Phir bhi, typeof operator galti se "object" return karta hai due to how the JavaScript 
+            engine was designed.
+
+
+

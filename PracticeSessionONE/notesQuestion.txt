@@ -1,0 +1,34 @@
+----------------------------------------------------QUESTIONS FOR PRACTICE--------------------------------------------------------------
+
+1. Log "Hello, Javascript" to the console in three different Ways ?
+
+Solution :console.log("Hello, javascript")
+          console.warn("Hello, Javascript")
+          console.error("Hello, Javascript")
+          console.info("Hello, Javascript")
+          console.table({namr:"Krishna", age:15})
+
+2. Question Two : Perform 35*2-(10/2)+7 and log te result ? 
+
+ Solution :    let a = 35*2
+               let b = (10/2)+7 
+               let c = a-b
+               console.log(c)          // Output : 58 Answer    // Wrong answer
+
+               console.log(35*2-(10/2)+7) // 72 answer
+
+3. Question Three : Log the Type OF "123", 123,true, and null using TYpeOf() ?
+
+Solution : console.log(typeof("123"))  // String
+           console.log(typeof(123))    // Number
+           console.log(typeof(true))   // Boolean
+           console.log(typeof(null))   // Object : it's a ig blender by default it was giving Object .
+           let arr = [1,2,3,4]
+           console.log(typeof(arr))    // Object
+           
+
+           
+ # it's a Weird behaviour in javascript to be honest null shouldn't be belong to Object data type , But by befaultin Javascript Objects 
+   are giving type tag of Zero (0) and null also have an type tag Zero (0) 
+        
+4. Question Four : 
