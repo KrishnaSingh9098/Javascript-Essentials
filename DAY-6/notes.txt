@@ -265,3 +265,4 @@ person.greet();            // Output: Hello, John
 
                             
  
+ // MAp Filer reduce : 

@@ -31,4 +31,259 @@ Solution : console.log(typeof("123"))  // String
  # it's a Weird behaviour in javascript to be honest null shouldn't be belong to Object data type , But by befaultin Javascript Objects 
    are giving type tag of Zero (0) and null also have an type tag Zero (0) 
         
-4. Question Four : 
+4. Question Four : Write a program that swaps the values of two variable 
+
+Solution : Using an array:
+
+             let swap = (a, b) => {
+                 let c = a;
+                 a = b;
+                 b = c;
+                 return [a, b]; // Return an array with both values
+             }
+
+             let a = 5, b = 10;
+             let swapped = swap(a, b);
+             console.log(swapped); // Output: [10, 5]
+
+
+       #  Using an object:  let swap = (a, b) => {
+                            let c = a;
+                            a = b;
+                            b = c;
+                            return { a, b }; // Return an object with both values
+                        }
+
+                        let a = 5, b = 10;
+                        let swapped = swap(a, b);
+                        console.log(swapped); // Output: { a: 10, b: 5 }
+                        
+
+        # NORMAL WAY Without Array Or Objects :
+
+        var a =10;
+        var b=12
+        var c;
+
+        c=a;
+        a=b;
+        b=c;
+        console.log(a,b)       // OUTPUT : 12,10  
+
+        # ONE MORE WAY :  [a,b] = [b,a]     console.log(a,b)   //OUTPUT : Values should goes chnge
+
+        # Another Ways  : let a =12;
+                          let b=13;
+                          a=a+b;
+                          b=a-b;
+                          a=a-b;
+                          console.log(a,b)
+
+5. Question Five :Use console.group() to organnize logs into a group ?
+
+ Answer :   
+          console.group("Aaj k Hisaab") : Starts a new group in the console for grouped messages. Example:
+          console.log("Daal")
+          console.log("Chaval")
+          console.log("Dahi")
+          console.log("Roti")                 //Same output gives
+          console.log("Sabji")
+          console.groupEnd() : Ends the current group of messages. Example:        
+
+ 1. Console.group : by default shows all values opened.
+ 2. console.end : ends the group         
+ 3. console.collapsed : default bnd ker deta hai consoled values ko hme kholna padta hai isse >
+
+# console.collapsed Example :
+
+   console.groupCollapsed("Collapsed Group");
+   console.log("This group is collapsed");
+   console.groupEnd();
+  
+
+# IMPORTANT POINT : Grouping in the console was also done . It does not shows Error.
+
+
+6. Question six : Declare a const Object, modify its properties, and log the updated Object?
+
+Answer : 
+
+const obj = {
+    name:"Krishna",
+    age:22,
+    email:"singh@gmail.com"
+}
+
+obj.age = 30
+console.log(obj)  //constant se aap value ko chnge nhi kar skte magar update kar skte hai uske ander ki cheeje
+
+Object.freeze(obj) // After this you cannot update the things which was present in the inner side of the Objjects.
+
+const artr =[0,1,2,3]
+artr[0]=2
+console.log(artr)
+
+7. Question seven : COnvert "50" String into a number using 3 different Ways ?
+
+a. First Way : Number("50")   // COnverted to number 
+
+English: The Number() function is used to convert a string into a number.
+
+Hinglish: Jab tum "50" ko number me convert karna chahte ho, toh tum Number() function ka use karte ho. Yeh string "50" 
+          ko ek number 50 me badal deta hai. Jab tum console.log() me isko daalte ho, toh console pe 50 print hoga.
+
+
+b. let ccc = parseInt("50")
+   console.log(typeof(ccc))  // NUMBER KA 50 OUTPUT Hoga.
+
+English: The typeof operator checks the type of a variable. Here, it's used to check the type of the ccc variable 
+         after it's been assigned the value 50.
+
+Hinglish: typeof() ek operator hai jo tumhare variable ka type bataata hai. Yahaan pe, tum ccc ka type check kar rahe ho.
+          Kyunki ccc ko integer value 50 mili hai, iska type number hoga.
+
+Output: number
+
+c. let tyu = +"50"
+   console.log(typeof(tyu))
+
+English: The + unary operator is a shorthand to convert a string into a number. It forces the string "50" to become a number 50.
+
+Hinglish: + ek shorthand method hai jo tumhe string ko number me convert karne ka tareeka deta hai. Jab tum "50" ke aage + lagaoge,
+           toh yeh usko ek number 50 me convert kar dega. Yeh ek simple aur quick way hai type conversion ka.
+
+Output: 50
+
+
+
+QUESTION 8.: Check if "Javascript " contains "Script" without using includes() ? 
+
+Answer : let str = "javaScript"
+         console.log(str.indexOf("Script"))      // One Method
+         console.log(str.indexOf("Script")!==-1) 
+
+
+IMP : ANd if it gives YOu a -1 That means this PArticular Sentence Or a Word Not Present On This
+
+
+# ONE ANOTHER WAY ? : if(str.indexOf("Script")===-1){    
+                      console.log("False")
+                      }
+                      else{                  
+                      console.log(true)
+                      }    
+
+    OUTPUT : TRUE {COMES}
+
+
+# ONE MORE METHOD : 
+
+if(str.search("Script")===-1){    
+                      console.log("False")
+                      }
+                      else{                  
+                      console.log(true)
+                      }      // It also Works Same as includes 
+
+
+
+QUESTION 9.: Create an arrayof 65 numbers and log the sum using reduce ?
+
+Answer : 
+
+# ONe MEthod For Finding Sum : 
+
+let numbers = [1, 2, 3, 4, 5];
+
+let sum = numbers.reduce((accumulator, currentValue) => {
+  return accumulator + currentValue;
+}, 0); // 0 is the initial value for accumulator
+
+console.log(sum);  // Output: 15
+
+
+# Second method for finding maximum number in an array
+
+let numbers = [1, 5, 3, 9, 2];
+
+let maxNumber = numbers.reduce((accumulator, currentValue) => {
+  return (currentValue > accumulator) ? currentValue : accumulator;
+}, numbers[0]);  // Initial value is the first element
+
+console.log(maxNumber);  // Output: 9
+
+
+1. The reduce() method iterates through the array, comparing each number to the current maximum (the accumulator).
+
+2. After going through the whole array, it returns the maximum value.
+
+
+# Third way FOr fiding Grouping elements by a property (like counting occurrences)
+
+let fruits = ["apple", "banana", "orange", "banana", "apple", "apple"];
+
+let count = fruits.reduce((accumulator, currentValue) => {
+  if (accumulator[currentValue]) {
+    accumulator[currentValue] += 1;
+  } else {
+    accumulator[currentValue] = 1;
+  }
+  return accumulator;
+}, {});  // Initial value is an empty object
+
+console.log(count);  
+// Output: { apple: 3, banana: 2, orange: 1 }
+
+
+
+#  Question 10.: Explain the difference betweeen undefined, null,and NaN with Examples ?
+
+: 1. undefined : undefined is the default value of a variable that has been declared but not assigned a value. 
+                 It is also the return value of a function that doesn’t explicitly return anything.
+
+  Example : let x;
+            console.log(x); // undefined, because x is declared but not initialized
+
+            function test() {}
+            console.log(test()); // undefined, because test() doesn't return anything
+
+   Key Point: If you declare a variable but don’t assign it any value, it will be undefined by default.
+
+            
+: 2. Null : null is an assignment value representing no value or an empty object reference. It’s an intentional assignment 
+            to indicate that a variable has no value.
+
+   Example : let person = null;
+             console.log(person); // null, explicitly set to no value
+
+             let obj = { name: "Alice" };
+             obj = null; // Reassigning obj to null
+             console.log(obj); // null
+             
+   Key Point: null is a value that is explicitly assigned to a variable to represent the absence of any object value.
+
+
+ : 3. NaN : Key Point: null is a value that is explicitly assigned to a variable to represent the absence of any object value.
+
+   Example : let result = 0 / 0;
+             console.log(result); // NaN, because 0 divided by 0 is undefined
+
+             let invalidNumber = Math.sqrt(-1);
+             console.log(invalidNumber); // NaN, because the square root of a negative number is not a real number
+
+   Key Point: NaN is specifically used to indicate that a mathematical operation didn’t yield a valid number. It is also the only
+              value in JavaScript that is not equal to itself (NaN !== NaN returns true).Key Point: NaN is specifically used to
+              indicate that a mathematical operation didn’t yield a valid number. It is also the only value in JavaScript that is 
+              not equal to itself (NaN !== NaN returns true).
+             
+# Comparison Example :
+
+let a;
+let b = null;
+let c = "hello" / 2;
+
+console.log(a); // undefined
+console.log(b); // null
+console.log(c); // NaN
+
+

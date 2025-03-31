@@ -1,4 +1,4 @@
-// console.log("HELLO WORLD")  
+// console.log("HELLO WORLD")
 
 // // let a=121,12;  // You didn't do this with Variable. This is not allows .
 
@@ -26,42 +26,35 @@
 //     }
 // }
 
-
-
-// // Looping Over an Array : 
-  
+// // Looping Over an Array :
 
 // let  Hero = ["Iron Man", 'Hulk', "Thor", "batman"]
-// for(let i=0;i<=Hero.length;i++){                     
+// for(let i=0;i<=Hero.length;i++){
 //     console.log(Hero[i]);
 // }
 
 // // OUTPUT : Iron Man ,Hulk ,Thor ,Batman, Undefined
 
-
-// // The loop condition i <= Hero.length will cause an "out of bounds" error because array indices in JavaScript are zero-based. 
+// // The loop condition i <= Hero.length will cause an "out of bounds" error because array indices in JavaScript are zero-based.
 // // The last valid index for the array is Hero.length - 1, so when i becomes equal to Hero.length, it will attempt to access
 // //  Hero[Hero.length], which is undefined.
 
-
 // let  ero = ["Iron Man", 'Hulk', "Thor", "batman"]
-// for(let i=0;i<Hero.length;i++){                     
+// for(let i=0;i<Hero.length;i++){
 //     console.log(Hero[i]);
 // }
 
 // // OUTPUT :  Iron Man ,Hulk ,Thor ,Batman
 
-
 // //The loop starts with i = 0 (the first index) and continues as long as i is less than the length of the Hero array (Hero.length).
 
 // //  Each iteration prints the value of Hero[i] at that index.
 
-// let arr45 =  [12, "KRishna", true]               // Why returns Object 
+// let arr45 =  [12, "KRishna", true]               // Why returns Object
 // console.log(typeof(arr45))
 
 // var arrt = [1,2,4,5,6,7]
 // console.log(arrt[0])
-
 
 // let arr = [1,2,3,4,5]
 // console.log(arr[1])               // Output : Undefined
@@ -79,22 +72,18 @@
 // console.log(arrr.length)
 
 // for(var i=0;i<30;i++){
-//     arrr[i]=i;   // The loop Start from the 0 and ends at the 100 But loop first goes throw 29 i<30 then when it comes to 
+//     arrr[i]=i;   // The loop Start from the 0 and ends at the 100 But loop first goes throw 29 i<30 then when it comes to
 // }                // print it  prints value from one to 29 and then empty array .
 // console.log(arrr)  // Prints the loop values as  well as the another values.
-
 
 // let arr = [1,2.4,3,"Krishna",true, function (){}, NaN,{}]
 
 // console.log(arr);
 
-
-
-
 // OBJECTS IN ARRAYS //
 
-// JavaScript mein object ek data structure hai jo key-value pairs ke form mein data ko store karta hai. 
-// Har key (jo property kehlata hai) ek string hota hai, aur uske saath jo value hoti hai, wo koi bhi data 
+// JavaScript mein object ek data structure hai jo key-value pairs ke form mein data ko store karta hai.
+// Har key (jo property kehlata hai) ek string hota hai, aur uske saath jo value hoti hai, wo koi bhi data
 // type ho sakti hai—number, string, array, ya phir ek aur object.
 
 // var a = {}
@@ -119,31 +108,38 @@
 // let myCar = new Car("Toyota", "Corolla", 2020, "red");
 // console.log(myCar)
 
+var obj = new Object();
+obj.name = "Car";
+obj.seat = 4;
+obj.engine = "24 Horse Power Engine";
+obj.speed = 75;
+console.log(obj);
 
-var obj = new Object()
-obj.name = "Car"
-obj.seat = 4
-obj.engine = "24 Horse Power Engine"
-obj.speed = 75
-console.log(obj)
-
-Object.freeze(obj)  // Freeze the object
-console.log(Object.isFrozen(obj))  // Output: true (to check if the object is frozen)
+Object.freeze(obj); // Freeze the object
+console.log(Object.isFrozen(obj)); // Output: true (to check if the object is frozen)
 
 //After these Two line below line code not work due to the freeeze Object.
 
-obj.classic = "Defender"  // This won't work because obj is frozen
-console.log(obj)  // Output: { name: 'Car', seat: 4, engine: '24 Horse Power Engine', speed: 75 }
-
+obj.classic = "Defender"; // This won't work because obj is frozen
+console.log(obj); // Output: { name: 'Car', seat: 4, engine: '24 Horse Power Engine', speed: 75 }
 
 // WHY OBJECT : Jab bhi aapko Ek hi cheej ki shaari value chahiye ho tab hum Objects use krte hai.
 // When you want to store the info of oNe entity.
 
 // Jab bhi . lagega Dot . ke just pehle object hoga .
 
+/// MAp Is using whenever you want tot looping over an array .
+
+// MAp ek naya array banata hai or us naye array me har ek element ko leker jata hai  jo map ke andar se return hota hai
+
+let arr = [1, 2, 3, 4];
+let s = arr.map(function (value) {
+  return arr[0] + 1;
+});
+
+console.log(s);
 
 
-
-
+// FIlter :
 
 

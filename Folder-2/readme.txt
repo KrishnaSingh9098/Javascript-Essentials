@@ -132,4 +132,13 @@ Example-1 : var age = Number(prompt("Enter your age:"));
                                                                               
 
   ^-^ Condition Check at the End Of The Loop ^-^
+
+
+// FOR EACH LOOP {Iterate for each value of the array it goes to the each and every single value }
+// For Each return nhi KArta hai 
+
+arr.forEach(function (value){
+    console.log(value);
+
+})             //Output : 1 2 3 4
                       

@@ -18,4 +18,53 @@ Answer :One-liner Answer: The output is "object" because, in JavaScript, null is
             engine was designed.
 
 
+QUESTION 2: Explain the difference betweeen undefined, null,and NaN with Examples ?
+
+: 1. undefined : undefined is the default value of a variable that has been declared but not assigned a value. 
+                 It is also the return value of a function that doesn’t explicitly return anything.
+
+  Example : let x;
+            console.log(x); // undefined, because x is declared but not initialized
+
+            function test() {}
+            console.log(test()); // undefined, because test() doesn't return anything
+
+   Key Point: If you declare a variable but don’t assign it any value, it will be undefined by default.
+
+            
+: 2. Null : null is an assignment value representing no value or an empty object reference. It’s an intentional assignment 
+            to indicate that a variable has no value.
+
+   Example : let person = null;
+             console.log(person); // null, explicitly set to no value
+
+             let obj = { name: "Alice" };
+             obj = null; // Reassigning obj to null
+             console.log(obj); // null
+             
+   Key Point: null is a value that is explicitly assigned to a variable to represent the absence of any object value.
+
+
+ : 3. NaN : Key Point: null is a value that is explicitly assigned to a variable to represent the absence of any object value.
+
+   Example : let result = 0 / 0;
+             console.log(result); // NaN, because 0 divided by 0 is undefined
+
+             let invalidNumber = Math.sqrt(-1);
+             console.log(invalidNumber); // NaN, because the square root of a negative number is not a real number
+
+   Key Point: NaN is specifically used to indicate that a mathematical operation didn’t yield a valid number. It is also the only
+              value in JavaScript that is not equal to itself (NaN !== NaN returns true).Key Point: NaN is specifically used to
+              indicate that a mathematical operation didn’t yield a valid number. It is also the only value in JavaScript that is 
+              not equal to itself (NaN !== NaN returns true).
+             
+# Comparison Example :
+
+let a;
+let b = null;
+let c = "hello" / 2;
+
+console.log(a); // undefined
+console.log(b); // null
+console.log(c); // NaN
 
