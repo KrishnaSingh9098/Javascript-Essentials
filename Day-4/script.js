@@ -39,29 +39,27 @@
 // Krishna()
 // Krishna()
 
-// Functiopns areStart doing their work whenever trhey wee Called
+// Functiopns are Start doing their work whenever they were Called
 
-// #PAssinr a parameter in a Function.
+// #PAssinG a parameter in a Function.
 
 // function greet(name){
 //     console.log(name)
 // }
-
-// greet('hEllo world')
+//  greet('hEllo world')
 // greet('hii')
 // greet('byy')
 // greet('Krisnna')
 // greet('Singh')
 
 
-
-
-// function ABCD(a,b,c,d){
-//              console.log(a,b,c,d)
+// function ABCD(a, b, c, d) {
+//     console.log(a, b, c, d)
 // }
- 
-// ABCD(1,20,3,56)
-// ABCD()
+
+// ABCD(1, 20, 3, 56)  // Ye function 4 arguments ke saath call hua hai, toh console par output hoga: 1 20 3 56
+
+// ABCD()              // Yahaan function bina kisi argument ke call hua hai, toh output hoga: undefined undefined undefined undefined
 
 
 
@@ -72,6 +70,7 @@
 
 // Shayri('Tumse kisne Kaha Ki Daga Krta Hu Mai ; Agar Krne Per Aau To Sirf Vafa Krta Hu Mai.')
 // Shayri("Kya Vo Sab Baate Sunai Deti HAi Tujhe Jo Teri Tasveero Se Kara Krta Hu Mai.")
+// Shayri()   // Undefind
 
 
 
@@ -87,6 +86,12 @@
 //   let cc = abcd()
 //   console.log(cc)
 
+
+// IMPLICIT ARROW FUNCTION   { KHud Se value Return krt Hai  }
+
+
+// var abcd=() =>12
+// let d = abcd()               // This was the way for mplicit return of Code.
 
 
 // Rest Parameter 
@@ -112,7 +117,7 @@
 //  not the initialization. As a result, if you try to access the variable before it’s initialized, it will return 
 //  undefined (not a ReferenceError).
 
-                            // var myVar;
+//                             // var myVar;
 // console.log(myVar)         //  console.log(myVar)        Output : Undefined (because the declaration is hoisted but not the assignment)
 // var myVar = 20;
 // console.log(myVar)           //OutPut:20  (now it's assigned the value)
@@ -123,7 +128,7 @@
 
 // When you declare a variable with let or const, the variable is hoisted to the top of its block scope, but they are placed in
 //  a "temporal dead zone" (TDZ) from the start of the block until the line of initialization.
-//  This means accessing the variable before its initialization results in a ReferenceError.
+//  This means accessing the variable before its initialization results in a Reference Error.
 
 // console.log(myLet); // ReferenceError: Cannot access 'myLet' before initialization
 // let myLet = 10;
@@ -136,17 +141,16 @@
 
 
 
-
-// let num = [1, 2, 3, 4, 5, 6];  // Initial array
+//let num = [1, 2, 3, 4, 5, 6];  // Initial array
 // num = [...num, 7, 8, 9];  // Using the spread operator to add elements to the array
 // console.log(num);
 
 
-// let a = Math.max(...num)
-// console.log(a)
+// let e = Math.max(...num)
+// console.log(e)
 
-// let b = Math.min(...num)
-// console.log(b)
+// let f = Math.min(...num)
+// console.log(f)
   
 
 // function sums(...nums){
@@ -157,16 +161,18 @@
 // sums(1,2,3,4,5)
 
 
+
 // function sums(a,...nums){
 //     console.log(a)                           // a holds the value : 1
-//     console.log(nums)                       // Treated as like a Array
-//     console.log(...nums)                    // Treated as like a single values
+//     console.log(nums)                       // Treated as like a Array .
+//     console.log(...nums)                    // Treated as like a single values .
 // }
 
-// sums(1,2,3,4,5)
+// sums(1,2,3,4,5)  
 
 // You Cannot add a Any Parameter after a REST parameter. It Could Through Error.
 // Example :            
+
 
 function sums(a,...nums){
     console.log(a)                           
@@ -213,7 +219,7 @@ function test(){
 test(1,"Hello")
 
 
-// ADvanced Syntacticall Sugar
+// Advanced Syntactical Sugar
   
 // const add = (x, y) => x + y;
 
@@ -225,8 +231,8 @@ test(1,"Hello")
 
 // 1. Arrow Function With No Parameter: 
 
-const greet=()=>{console.log("HEllo Js")}
-greet()
+// const greet=()=>{console.log("HEllo Js")}
+// greet()
 
 // 2. Arrow Function With  Parameter: 
 
@@ -271,3 +277,6 @@ const multiply = (length,breadth) =>{
   }
 
   console.log(reversed)
+
+
+  

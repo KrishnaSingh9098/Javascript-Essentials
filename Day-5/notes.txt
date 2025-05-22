@@ -45,7 +45,7 @@ ans.get(); // Output: "32"
 
 # Some Examples BAsed ON IIFE ARE also in the Script.js File.
 
-                                /* Higher Order Functions  */
+                                         /* Higher Order Functions  */
 
 A Higher-Order Function in JavaScript (or in any functional programming language) is a function that:
 

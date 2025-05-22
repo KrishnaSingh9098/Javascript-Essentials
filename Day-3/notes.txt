@@ -9,7 +9,7 @@ String is a Number Of Characters used to represents Text .
 1. Let str = "Krishna Thakur";
 2. var str = 'Akansha Singh';
 
-For finding the length of the String :{ str.length } Shold be used.
+For finding the length of the String :{ str.length } Should be used.
 
 
                                                      "Template-Literals"

@@ -7,7 +7,7 @@
 // console.error("This is Errror")
 
 
-//  Javascript are used for making Websites Dynamic Because Before the Javascript Websitres Are Static. 
+//  Javascript are used for making Websites Dynamic Because Before the Javascript Websites Are Static. 
 // Dyanmic Languages : Data typre define not compulsary.(JavaScript KE Andar / Python)
 
 
@@ -50,17 +50,16 @@
 //
 
 // let a=5;
-// console.log(a++)
-// console.log(++a)
+// console.log(a++)         //6
+// console.log(++a)//7
 
 
-// let userName = prompt("Enter Your Name")
-// let age = prompt("Enter Your Age")
-// console.log(userName,age)
+// let userName = prompt("Enter Your Name")  //Krishna
+// let age = prompt("Enter Your Age")   //23
+// console.log(userName,age)    // Krishna 23
 
-
-// console.log(window)
-
+// console.log(window)    //Guves me an all Window object
+ 
 
 
 //  ------   

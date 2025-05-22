@@ -130,7 +130,7 @@ let arr = [3, 4, 1, 3, 4, 6, 7];
 let obj = {};
 
 arr.forEach(function(value) {
-    obj[value] ? (obj[value] = 1) : obj[value]++;   // Agar hum undefined me ++ krenge toh NaN milta hai.
+    // obj[value] ? (obj[value] = 1) : obj[value]++;   // Agar hum undefined me ++ krenge toh NaN milta hai.
     obj[value] === undefined ? (obj[value] = 1) : obj[value]++;
 });
  
@@ -140,3 +140,33 @@ console.log(obj);   // {1: 1, 3: 2, 4: 2, 6: 1, 7: 1} Output
 // St point KOn kitni baar aaya hai ye nil=kalte hai pehle .
 
 
+// Implement a Higher Order Fuction that Applies a Function Twice ?
+
+function applyTwice(value, fn){
+    return fn(fn(value))
+}
+
+function addTwo(num){
+    return num+2
+}
+
+console.log(applyTwice(10,addTwo))
+
+
+// // Function to return a function that multiplies the given number by another number
+function mul(value) {
+    return function(num) {
+        return value * num;
+    };
+}
+
+// Example usage:
+const multiplyBy2 = mul(2); // create a function to multiply by 2
+console.log(multiplyBy2(5)); // Output: 10 (2 * 5)
+
+const multiplyBy3 = mul(3); // create a function to multiply by 3
+console.log(multiplyBy3(5)); // Output: 15 (3 * 5)
+
+
+
+// Question 3 : 

@@ -5,6 +5,8 @@ Functions : In JavaScript, a function is a block of code designed to perform a s
             function keyword or as an arrow function, and can accept parameters and return a resultand Can be invoked Whenever 
             needed.
 
+# Reuse and Run Any Point Of Time .
+
 HInglish  : JavaScript mein, function ek code ka block hota hai jo specific task ko perform karta hai. Isse function keyword ya
             arrow function se define kiya ja sakta hai, aur yeh parameters le sakta hai, result return kar sakta hai, aur jab 
             zarurat ho tab invoke (call) kiya ja sakta hai.
@@ -25,6 +27,29 @@ Answers  : Functions are important because they help in:
 # Function ke andar jo input hota hai use hum Parameter Kehte hai.
 # The Parameter of Function they are as like local Variables of function and they have block space.
   { Function ke andar hi sirf valid hote hai }
+
+
+HINGLISH : 
+
+❓ Question: Why do we need Functions? 
+
+✅ Answer: Functions important hote hain because: -To reuse some code which is ver lobng to re-write
+
+Code Reusability: Ek baar function likhne ke baad, usse multiple times use kiya ja sakta hai bina same code dobara likhe. 
+                  Isse time aur effort dono save hote hain.
+Modularity: Functions complex task ko chhote-chhote parts mein divide kar dete hain, jisse code samajhna aur maintain karna easy 
+            ho jata hai.
+Avoiding Redundancy: Function use karke aap same logic ya code ko bar-bar likhne se bach sakte ho.
+Maintainability: Jab code functions mein properly organized hota hai, toh debug karna ya update karna easy hota hai, kyunki 
+                 changes sirf ek specific jagah karne hote hain.
+Abstraction: Function ke through aap complex logic ko hide kar sakte ho, jisse code clean aur readable lagta hai.
+
+# Note: Function ke andar jo input dete hain, unhe hum Parameters kehte hain.
+
+  1.Parameters ek tarah ke local variables jaise hote hain.
+  2.Inka scope sirf function ke andar hota hai – matlab function ke bahar ye valid nahi hote.
+  3.Ye variables sirf usi block (function ke andar) mein kaam karte hain.
+
 
 
 EXAMPLE : A simple function which was printing the name .
@@ -117,11 +142,60 @@ DRY - RUN Of the Code IS The Another thing to run the code in the memmorize Way.
                                                    return 12;
                                                              }
 
-# Fat Arrow Function With Implicit Return .  Apne App Return Krna Without Return KEyword.
+# Fat Arrow Function With Implicit Return .  Apne App Return Krna Without Return Keyword.
 # Or jab humm krte hai toh vo explixit Return hota hai                                                            
 
+// #PAssinG a parameter in a Function.
+
+function greet(name){
+    console.log(name)
+}
+ greet('hEllo world')
+greet('hii')
+greet('byy')
+greet('Krisnna')
+greet('Singh')
 
 
+                                          /* ANONYMOUS FUNCTION */
+
+📌 Anonymous Function kya hoti hai?
+   Anonymous function ek function without a name hota hai. Iska naam nahi hota, aur usually ise expression ke form mein ya immediately 
+   call karne ke liye use kiya jata hai.
+
+   Example  : const greet = function() {
+              console.log("Hello!");
+              };
+
+              greet();  // Output: Hello!
+
+ 🗣️ Hinglish: Function ko ek variable greet mein assign kiya gaya, fir us variable ko call karke function run hua.  
+
+
+ 💡 2. Immediately Invoke karna (IIFE - Immediately Invoked Function Expression):
+
+  (function() {
+    console.log("I am anonymous and called immediately!");
+  })();
+
+🗣️ Hinglish: Function likhne ke baad usko turant () se call kar diya gaya. Isse bolte hain IIFE.     
+
+💡 3. Arrow Function ke through (Anonymous hi hota hai):
+
+const sum = (a, b) => {
+    return a + b;
+};
+
+console.log(sum(5, 3));  // Output: 8
+🗣️ Hinglish: Arrow function bhi anonymous hota hai jab tak usse kisi variable mein assign na kiya jaye. 
+   Yahaan sum ek variable hai jo function ko hold kar raha hai.
+
+
+
+Summary in One Line Hinglish:
+
+Anonymous function ko ya toh variable mein assign karke call karo (greet()), ya turant likhne ke baad () laga ke call karo (IIFE),
+ ya arrow function ke form mein use karo.
 
                                                 /* REST PARAMETER  */
 
@@ -223,6 +297,23 @@ abcd(1,2,3,4,5,6,7,8,9)
 HOISTING refer to the process wherby the interpreter appear to move the declarations to the top of the code before execution.
 Variable Can thus be referred before they are declared in Javascript.
 
+HINGLISH : Hoisting ek process hai jisme JavaScript ka interpreter aisa lagta hai jaise wo variable aur function declarations
+           ko code ke top par "utha" deta hai, execution se pehle.
+
+Iska matlab ye hai ki aap kisi variable ko uske declare hone se pehle bhi refer kar sakte ho — lekin dhyan rahe, value assign hone 
+se pehle uska value undefined hoga (agar var use kar rahe ho).
+
+Function declarations bhi hoist hoti hain, aur aap unhe pehle call kar sakte ho:
+
+# EXAMPLE :  sayHello(); // Output: Hello!
+
+             function sayHello() {
+               console.log("Hello!");
+             }
+             
+
+
+
 Important Note : Javascript only hoist declaration not initialization. 
 
 Example : hello("Krishna")
@@ -284,11 +375,11 @@ To summarize : let aur const ke saath, variable hoisted hota hai lekin initializ
 
 
 
-                                                  TDZ (Temporal Dead Zone) kya hota hai?
+                                                  TDZ ( Temporal Dead Zone) kya hota hai 
 
   Jab aap JavaScript mein let ya const ka use karte ho, toh variable block scope mein hoisted hota hai, lekin wo ek temporal dead 
   zone mein chala jaata hai. Yeh temporal dead zone ek aise period ko refer karta hai jab tak variable ko initialize nahi kiya gaya,
-   uss time tak us variable ko access karna allowed nahi hota.
+  uss time tak us variable ko access karna allowed nahi hota.
 
 TDZ ka matlab hai ki aap variable ko uski declaration se pehle access nahi kar sakte, chahe wo hoisted ho chuka ho. Agar aap aise access
  karne ki koshish karte ho, toh JavaScript aapko ReferenceError dega.
@@ -338,6 +429,8 @@ and Math.min() expect individual arguments, not an array.
 Example with an array : const arr = [1, 2, 3, 4, 5];
                         console.log(Math.max(arr)); // NaN
                         console.log(Math.min(arr)); // NaN
+
+
 
 Why does this happen? : Math.max() and Math.min() do not accept an array directly. They expect separate arguments, like this:
 

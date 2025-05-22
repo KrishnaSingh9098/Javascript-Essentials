@@ -17,9 +17,9 @@ console.log(num);
 //     console.log("This is an IIFE!");
 //   })();
 
-//   (function(message) {
-//     console.log(message);
-//   })("Hello, IIFE!");
+  // (function(message) {
+  //   console.log(message);
+  // })("Hello, IIFE!");
   
 
 //   // Here, we're defining a variable `ans` and assigning it the result of an IIFE (Immediately Invoked Function Expression).
@@ -131,17 +131,17 @@ console.log(x);          // OUTPUT : 20,10
 console.log("Higher Order Function Started :")
 console.log("Ek aisa function jo yaa toh return kare function nahi toh accept kare function in parameter, Ya fir dono")
 console.log("Yha Function return kar rha hai")
-// function abcd(){
-//   return function (){
-//     return function (){
-//       console.log('Hello World')
-//     }
-//   }
-// }
+function abcd(){
+  return function (){
+    return function (){
+      console.log('Hello World')
+    }
+  }
+}
 
-// // abcd()()();
-// let ans = abcd()
-// ans()()
+abcd()()();
+let ans = abcd()
+ans()()
 
 
 // console.log("Yha per accept kr rha h function ")

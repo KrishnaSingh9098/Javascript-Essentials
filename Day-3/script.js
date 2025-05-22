@@ -50,16 +50,16 @@
 // while(i< 15)
 
 
-// for(var i=0;i<=12;i++){
-//     console.log(i)
-//     if(i===8) break
-// }
+for(var i=0;i<=12;i++){
+    console.log(i)
+    if(i===8) break
+}
 
-// for(var i=0;i<=12;i++){
+for(var i=0;i<=12;i++){
   
-//     if(i===8) continue;
-//     console.log(i)
-// }
+    if(i===8) continue;
+    console.log(i)
+}
 
 
 
