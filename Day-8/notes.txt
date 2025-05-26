@@ -1,0 +1,164 @@
+   # TAble OF Content : BOM : Browser Object Model
+                        DOM : Document Object Model
+
+
+   This All Was a Part of Web API                         Browser Object Model
+
+ What is the BOM ?
+
+The Browser Object Model allows JavaScript to interact with the browser outside of the content of the web page
+ (which is managed by the DOM, or Document Object Model).
+
+It provides objects that represent the browser environment, such as:
+
+1.window
+2.navigator
+3.screen
+4.location
+5.history {forward(),go(),backward()}
+6.alert(), confirm(), prompt() functions
+7.Open()  { Opens a New Window Tab and returns a Window Object } You Can also give it a name with open('apnylink','name')
+8.Close() {It closes the Tab Which was Opened By the Open() Commmand }
+          Scripts may close only the windows that were opened by them.
+
+9.resizeTo() : open('https://youtube.com/','Krishna','resizable') 
+10.resizeBy()
+11. moveTo()
+12. moveBy()
+13. scrollBy()
+14. scroll()
+15. scrollTo()
+13. print()
+14. Document
+
+# This Allm Commmand Could works only with brower content
+
+Key BOM Objects :  Object	       Description     
+
+                   window	       The global object that represents the browser window. It is the top-level object in BOM.
+                   navigator	   Contains information about the browser (like navigator.userAgent).
+                   screen	       Contains information about the user’s screen (e.g., screen.width, screen.height).
+                   location	     Contains information about the current URL and allows redirection (location.href, location.reload()).
+                   history	     Allows navigation through the browser history (history.back(), history.forward()).
+
+
+Example :    console.log(window.innerWidth/Height);       // Width/Height of the window
+             console.log(window.outerWidth/Height);      //  Width/Height of the window
+             console.log(navigator.userAgent);           // Info about the browser
+             console.log(location.href);           // Current URL
+             alert("Hello from BOM!");             // Simple browser alert
+             
+BOM vs DOM
+
+| Feature  | BOM                                   | DOM                             |
+| -------- | ------------------------------------- | ------------------------------- |
+| Scope    | Browser-level objects                 | Web page structure and elements |
+| Examples | `window`, `navigator`, `location`     | `document`, `getElementById()`  |
+| Purpose  | Controls browser settings/environment | Interacts with HTML content     |
+
+
+🧠✅✅ : Har Ek Tab Ka Alag Alag Window Object Hota Hai.
+
+
+   ###  **JavaScript and the DOM – Interacting with the Browser**  ###
+
+- What is the DOM (Document Object Model)?
+- Accessing and modifying HTML elements with `document.getElementById()`, `document.querySelector()`, and `document.querySelectorAll()`
+- Changing content using `innerHTML`, `textContent`, `value`
+- Manipulating styles with `style` property and changing CSS dynamically
+- Adding and removing elements with `appendChild()`, `removeChild()`, `insertBefore()`
+
+- **Key Concepts:** DOM Manipulation, Querying elements, Modifying styles and content
+
+
+                                                 DOM :  DOCUMENT OBJECT MODEL
+
+The Window Object represents an open window in a browser . It is browsers Object (not Javascript's) & is automatically 
+created by browser.
+
+It is a global object with lots of properties and method.
+# console.log() in a javascript is basically a part of window.
+
+HTML ko javascript ke andar Access krne ka trika hai DOM.
+
+# THERE ARE THE MAIN FOUR PILARS OF DOM ARE : 
+
+1. Selection of an Element . ✅✅
+2. Changing HTML Files. ✅✅
+3. Changing Css . ✅✅
+4. Event Listeners . ✅✅
+
+
+
+
+                                                /* Selection Of an Element */
+
+ 1.Selecting with ID :       DOCUMENT.getElementById("IDname")
+
+ 2.Selecting with Class :   DOCUMENT.getElementByClass("ClassName")
+
+ 3.Selecting with TagName : DOCUMENT.getElementByTagName("h1")
+
+
+# Query Selectors : 1.querySelector()                  // returns an first Element
+                    2.querySelectorAll()               // returns a NodeList
+
+# QuerySelector Example  : 
+
+🧪 HTML:
+<body>
+  <h1 id="main-heading">Hello, World!</h1>
+  <p class="description">This is a paragraph.</p>
+
+  <script src="script.js"></script>
+</body>
+
+
+🧠 JavaScript (script.js) :   // Select the h1 element by ID
+
+                               const heading = document.querySelector('#main-heading');
+                               heading.textContent = 'Hello from querySelector!';
+
+                               // Select the paragraph element by class
+
+                               const paragraph = document.querySelector('.description');
+                               paragraph.style.color = 'blue';
+
+
+
+# QuerySelectorAll Example  : 
+🧪 HTML:
+<body>
+  <ul>
+    <li class="item">Item 1</li>
+    <li class="item">Item 2</li>
+    <li class="item">Item 3</li>
+  </ul>
+
+  <script src="script.js"></script>
+</body>
+
+
+🧠 JavaScript (script.js):   
+
+// Select all elements with the class "item"
+const items = document.querySelectorAll('.item');
+
+// Loop through each item and change its text color
+items.forEach((item, index) => {
+  item.style.color = 'green';
+  item.textContent = `Updated Item ${index + 1}`;
+});
+
+
+
+
+                                                   DOM MANIPULATION
+
+1. tag-Name : return tag for element Nodes
+2. innerText : return the text content of the element all its  .
+3. innerHtml : returns the plain text or HTML context in the element.
+4. textContent : returns textual Context even for hidden elements.      
+
+
+#INNERHTML : 

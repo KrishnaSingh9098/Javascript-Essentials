@@ -18,3 +18,13 @@
         color: rgb(80, 168, 162);
     }
     
+   h2, h3{
+        color: #b7b2b2;
+    }
+
+
+    #box{
+        width: 200px;      /* Width of the square */
+      height: 200px;     /* Same as width to make it square */
+      background-color: #4CAF50; /* Example background color */
+    }
