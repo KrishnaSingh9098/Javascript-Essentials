@@ -89,16 +89,39 @@ HTML ko javascript ke andar Access krne ka trika hai DOM.
 4. Event Listeners . ✅✅
 
 
+# Some Moe Important Things Abot Dom HOw TO Access IN Browser :  Commands 
+
+document.children   returns - HtmlCollection
+document.children[0] returns - Head
+document.children[1] returns - body
+
+document.body   -  returns- body
+
+document.children[0].children 
+document.children[0].children[1]
+
+
+Question : What is Documnet Object model ? 
+
+Whenever we write HTML code , there is a component in our browser called HTML Parser . It Converts every Element in the form of Object
+and creates an Object called Documnet . And it is in a window Object . Window Which represents our entire browser . It represents 
+different Features Of the Browsers
+
+
+Document represents view port only .
+
+
 
 
                                                 /* Selection Of an Element */
 
- 1.Selecting with ID :       DOCUMENT.getElementById("IDname")
+ 1.Selecting with ID :       DOCUMENT.getElementById("IDname")   Their Return value is Null.
 
- 2.Selecting with Class :   DOCUMENT.getElementByClass("ClassName")
+ 2.Selecting with Class :   DOCUMENT.getElementsByClassName("ClassName")
 
  3.Selecting with TagName : DOCUMENT.getElementByTagName("h1")
-
+                            1. It returns an array.
+                            2. If no elements match the tag, it returns an empty HTMLCollection.
 
 # Query Selectors : 1.querySelector()                  // returns an first Element
                     2.querySelectorAll()               // returns a NodeList
@@ -106,6 +129,7 @@ HTML ko javascript ke andar Access krne ka trika hai DOM.
 # QuerySelector Example  : 
 
 🧪 HTML:
+
 <body>
   <h1 id="main-heading">Hello, World!</h1>
   <p class="description">This is a paragraph.</p>
@@ -157,8 +181,112 @@ items.forEach((item, index) => {
 
 1. tag-Name : return tag for element Nodes
 2. innerText : return the text content of the element all its  .
+ Example : document.body.children[0].innerHTML = 'hell'       all could done in browser 
 3. innerHtml : returns the plain text or HTML context in the element.
 4. textContent : returns textual Context even for hidden elements.      
 
 
 #INNERHTML : 
+
+
+
+# Difference Between InnerText And TextContent In Dom Manipulation    (\n = New line )
+
+
+ # GETTER OR SETTER ATTRIBUTES IN JAVASCRIPT : 
+  
+ After Doing That ON thing in Console.dir It will reurns an Object Value In The frm Of Console.dir
+
+ 1.  console.dir(document.querySelector('[krishna]'))            Returns always in Object From me answer
+
+
+
+# Changing in Style if css with dom  
+
+
+
+for (const link of allLinks) {
+  //     link.style.color = 'teal'
+  //     link.style.textDecorationLine = 'none'
+  //     link.style.fontWeight = '700'
+  //     link.style.fontFamily = 'cursive'
+  // }
+
+
+
+//   link.style.cssText = `  color: teal;
+//     font-size: 18px;
+//     font-family: cursive;
+//     font-weight: 700;
+//     text-decoration-line: none;`;
+
+// link.className = 'green-link'
+
+// link.setAttribute('class', 'green-link wavy-link')
+
+console.log(link.classList)
+
+link.classList.add(".hiiii")
+    
+}
+
+
+link.classList.add('green-linnk')
+link.classList.remove('green-linnk')   // Any another link
+link.classList.toggle('green-linnk')  Agar nhi hai class toh lga dega or agar hai us naam ki class toh hta dega .
+
+
+
+
+# HOw to Access Parent sibling and Children Elements using Javascript :
+
+Example : 
+
+const netlink = document.querySelector("#hhj > a:nth-child(2)")
+netlink.parentElement   // gives P tag 
+netlink.parentElement.parentElement   // gives a body element
+netlink.parentElement.parentElement.parentElement   // gives an html Element / Body
+netlink.parentElement.parentElement.parentElement.parentNode   // gives an documentObject
+
+
+
+netlink.childNodes   // give an nodelist or node 
+NodeList[text]
+
+netlink.children  // gives an element  If present on this .
+
+HTMLCollection  [] 
+
+** Jo Element Nhi hota hai vo bi ek node hota hai .
+
+
+## How To Acces Sibblings : 
+
+1. There was an next and Previos Sibling OCncept was running.
+
+** nextElementsibling   : 
+
+# netlink.nextElementSibling  : gives the next sibbling first one remove krne ke baad .
+# netlink.nextElementSibling.nextElementSibling.: gives the next sibbling Second one remove krne ke baad.
+netlink.nextElementSibling.nextElementSibling.nextElementSibling : gives the next sibbling Third one remove krne ke baad.
+netlink.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling  : If he finds nothing then it gives us an NUll.
+
+
+**previousElementSibling  : 
+
+1. netlink.previousElementSibling : gies FirstOne sibling.
+
+
+
+
+**.nextSibling  : It gives an textNode  
+
+## Difference Between Node or Element : 
+
+| Feature  | **Node**                       | **Element**                                       |
+| -------- | ------------------------------ | ------------------------------------------------- |
+| Type     | General term                   | Specific type of node                             |
+| Includes | Elements, text, comments, etc. | Only tag-based structures                         |
+| Example  | Text node, comment node        | `<div>`, `<p>`, `<a>`, etc.                       |
+| In DOM   | All are `Node` objects         | Elements are `Element` objects (subclass of Node) |
+

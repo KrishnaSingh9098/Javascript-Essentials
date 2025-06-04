@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: gilroy;
+    }
+    
+    html,body{
+        height: 100%;
+        width: 100%;
+    }
+    
+    body{
+        background-color: #ede5e5;
+    }
+
+    .container{
+        color: rgb(82, 78, 73);
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .card{
+        width: 70px;
+        height: 80px;
+        background-color: pink;
+        align-items: center;
+        justify-content: center;
+        border-radius: 4px;
+        font-size: 36px;
+    }

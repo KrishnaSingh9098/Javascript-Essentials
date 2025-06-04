@@ -28,3 +28,19 @@
       height: 200px;     /* Same as width to make it square */
       background-color: #4CAF50; /* Example background color */
     }
+
+    .cssimg{
+        color:  red;
+    }
+
+
+    p b {
+        pointer-events: none;
+        /* visibility:  hidden; */
+        opacity: 0;
+    }
+
+
+    [krishna='hlo']{
+        color: #4CAF50;
+    }
