@@ -1,6 +1,6 @@
 
 .container {
-    color: green;
+    color: rgb(70, 196, 70);
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
@@ -9,7 +9,7 @@
 .card {
     width: 100px;
     height: 120px;
-    background-color: pink;
+    background-color: rgb(95, 82, 84);
     display: flex;
     align-items: center;
     justify-content: center;
