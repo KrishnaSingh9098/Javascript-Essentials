@@ -37,7 +37,7 @@ const h1 = document.querySelector('h1')
 // With Counting on images method  : 
 
 
-for(let i = 1;i<=20;i++){
+for(let i = 1;i<=100;i++){
     const imageContainer = document.createElement("div")
 imageContainer.classList.add('img-container')
 const imgnew = document.createElement("img")
@@ -48,3 +48,12 @@ para.innerText = i
 imageContainer.append(imgnew,para)
 container.append(imageContainer)
 }
+
+
+const myImg = document.querySelector("body > div > div:nth-child(5)")
+
+
+
+
+
+// removeChild ko parnt kr uper call krna hota hai .
