@@ -1,0 +1,62 @@
+const h1 = document.querySelector('h1')
+const card = document.querySelector('.card')
+const container = document.querySelector('.container')
+
+let i = 1
+
+// ------------------ MOUSE EVENTS NOTES ------------------
+
+// 'click' – Fires when mouse is pressed and released on the element
+// Good for triggering actions like button presses
+// card.addEventListener('click', function (e) {...})
+
+// 'mousedown' – Fires *when mouse button is pressed down*
+// Useful for detecting the start of a click or drag
+// card.addEventListener('mousedown', function (e) {...})
+
+// 'mouseup' – Fires *when mouse button is released*
+// Useful for ending a drag or click action
+// card.addEventListener('mouseup', function (e) {...})
+
+// 'mouseenter' – Fires when mouse enters the element (doesn't bubble)
+// Good for hover effects (non-repetitive)
+// card.addEventListener('mouseenter', function (e) {...})
+
+// 'mouseleave' – Fires when mouse leaves the element (doesn't bubble)
+// Useful for undoing hover effects
+// card.addEventListener('mouseleave', function (e) {...})
+
+// 'mousemove' – Fires repeatedly when mouse moves *within* the element
+// Can be heavy; use throttling for performance
+// card.addEventListener('mousemove', function (e) {...})
+
+// 'mouseout' – Fires when mouse leaves the element *or its children* (bubbles)
+// Triggers more often than mouseleave, especially in nested elements
+card.addEventListener('mouseout', function (e) {
+  console.log(e)
+  console.log("CARD WAS CLICKED AND ITS MADE A NW CARD")
+  
+  const newCard = document.createElement("div")
+  newCard.className = "card"
+  newCard.textContent = `card${i}`
+  i++
+
+  document.body.append(newCard)
+  container.append(newCard)
+})
+
+
+
+
+
+📝 Quick Summary  :
+
+| Event        | Trigger Condition                | Bubbling? | Use Case                              |
+| ------------ | -------------------------------- | --------- | ------------------------------------- |
+| `click`      | Mouse down + up on element       | Yes       | Basic click actions                   |
+| `mousedown`  | Mouse button pressed             | Yes       | Start of drag or press                |
+| `mouseup`    | Mouse button released            | Yes       | End of drag or press                  |
+| `mouseenter` | Mouse enters element             | **No**    | One-time hover entry                  |
+| `mouseleave` | Mouse leaves element             | **No**    | One-time hover exit                   |
+| `mousemove`  | Mouse moves inside element       | Yes       | Real-time tracking (throttle advised) |
+| `mouseout`   | Mouse leaves element or children | Yes       | Detect exit from nested elements      |
