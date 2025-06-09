@@ -265,4 +265,27 @@ person.greet();            // Output: Hello, John
 
                             
  
- // MAp Filer reduce : 
+ // MAp Filter reduce : 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ //  # Array of Objects :
+
+const arr = [
+  { name: "krishna", age: 25 },
+  { name: "krish", age: 25 },
+  { name: "Annu", age: 5 },
+];
+
+console.log(arr);
