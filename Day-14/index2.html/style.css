@@ -36,3 +36,18 @@ body {
     object-fit: cover;
     border-radius: 50%;
   }
+
+  button{
+    padding: 10px 20px;
+    margin-top: 10px;
+  }
+
+  h5{
+    margin-top: 10px;
+    font-size: 23px;
+  }
+
+
+
+
+

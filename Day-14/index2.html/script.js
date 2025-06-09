@@ -12,6 +12,7 @@ const arr = [
     name: "krishna",
     age: 25,
     married: false,
+    istatus:'stranger',
     image:
       "https://media.istockphoto.com/id/2152439466/photo/natural-hair-care-portrait-of-young-woman-in-exotic-tropical-foliage.webp?a=1&b=1&s=612x612&w=0&k=20&c=7dBHad_5xYfgueHV4PY8QIXFr7WFSdExWPQfTrtaHXM=",
   },
@@ -19,6 +20,7 @@ const arr = [
     name: "krish",
     age: 25,
     married: true,
+    istatus:'stranger',
     image:
       "https://images.unsplash.com/photo-1611601322175-ef8ec8c85f01?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bW9kZWxzfGVufDB8fDB8fHww",
   },
@@ -26,6 +28,7 @@ const arr = [
     name: "Annu",
     age: 22,
     married: false,
+    istatus:'stranger',
     image:
       "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8bW9kZWxzfGVufDB8fDB8fHww",
   },
@@ -40,7 +43,9 @@ arr.forEach(function (e) {
         <img src="${e.image}" alt="">
         <h1>${e.name}</h1>
         <h5>${e.age}</h5>
+        <h5>Stranger</h5>
         <h3>Married : ${e.married}</h3>
+        <button> Add Friend</button>
     </div>`
 });
 

@@ -5,3 +5,97 @@ How To Manage Local Storage
 
 # Json Data To Frontend : 
 
+
+
+🔹 What is e.stopPropagation()?
+
+In JavaScript, when you click on an element, the event doesn't just stay there—it can "bubble up" to its parent elements. 
+This is called event bubbling.
+
+The e.stopPropagation() method is used to stop the event from bubbling up to parent elements. That means only the element you targeted 
+will handle the event, and its parents won't know it happened.
+
+🔶 In Hinglish: JavaScript me jab aap kisi child element pe click karte ho, toh event parent elements tak bhi jaata hai—isse
+                 event bubbling kehte hain.
+
+                 Agar aap sirf child element par hi event chahte ho aur parent tak na jaaye, toh e.stopPropagation() use karte hain.
+
+
+ Example : element.addEventListener('click', function(e) {
+           e.stopPropagation();
+           });
+
+## EXAMPLE : 
+
+
+ <div id="parent" style="padding: 20px; background-color: lightblue;">
+  Parent Div
+  <button id="child">Click Me</button>
+</div>
+
+<script>
+  document.getElementById('parent').addEventListener('click', function() {
+    alert('Parent clicked!');
+  });
+
+  document.getElementById('child').addEventListener('click', function(e) {
+    e.stopPropagation(); // bubbling ko yahin rok deta hai
+    alert('Button clicked!');
+  });
+</script>
+
+
+🔹 Output:
+1.Jab aap button pe click karoge, sirf "Button clicked!" alert aayega.
+
+2."Parent clicked!" alert nahi aayega, kyunki event bubbling stop ho chuki hai.
+
+
+
+
+
+🔹 Event Capturing kya hota hai?
+
+JavaScript me jab koi event hota hai (jaise click), toh wo do phases me travel karta hai:
+
+1.Capturing phase (upar se neeche - parent se child)
+
+2.Bubbling phase (neeche se upar - child se parent)
+
+ #  By default, hum event listeners bubbling phase me use karte hain. Lekin agar aap capturing phase me sunna chahte ho, 
+    toh addEventListener() me third argument true dena hota hai.
+
+EXAMPLE :  element.addEventListener('click', function, true); // true = capturing phase
+
+
+🔹 Example: 
+
+<div id="outer" style="padding: 30px; background-color: lightblue;">
+  Outer Div
+  <div id="inner" style="padding: 30px; background-color: lightgreen;">
+    Inner Div
+  </div>
+</div>
+
+<script>
+  document.getElementById('outer').addEventListener('click', function() {
+    alert('Outer Div - Capturing');
+  }, true);
+
+  document.getElementById('inner').addEventListener('click', function() {
+    alert('Inner Div - Capturing');
+  }, true);
+</script>
+
+
+🔹 Output (Inner Div pe click karne par):(when clicking on Inner Div):
+
+1.Pehle "Outer Div - Capturing" alert aayega
+2.Phir "Inner Div - Capturing" alert aayega
+
+✅ Summary:
+
+| Phase     | Direction      | Listener Option                |
+| --------- | -------------- | ------------------------------ |
+| Capturing | Parent → Child | `useCapture = true`            |
+| Bubbling  | Child → Parent | `useCapture = false` (default) |
