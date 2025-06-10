@@ -1,0 +1,27 @@
+h1 {
+    background-color: rgb(226, 26, 26);
+}
+
+/* style.css */
+.container {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 100px;
+  height: 100px;
+  background-color: lightgray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  border: 1px solid #333;
+  cursor: pointer;
+}
+
+.add-card {
+  background-color: rgb(172, 100, 149);
+  font-weight: bold;
+}

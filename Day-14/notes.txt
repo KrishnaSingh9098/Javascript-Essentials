@@ -66,7 +66,9 @@ JavaScript me jab koi event hota hai (jaise click), toh wo do phases me travel k
     toh addEventListener() me third argument true dena hota hai.
 
 EXAMPLE :  element.addEventListener('click', function, true); // true = capturing phase
-
+                                                                 
+                 element.addEventListener('click', function,{captcha :true},Once : true  ),;                                                
+ Once : true  : Wors ONe times only 
 
 🔹 Example: 
 
