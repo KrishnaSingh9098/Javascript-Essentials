@@ -1,0 +1,137 @@
+
+                                                 GIT AND GITHUB (Version Control System)
+                                                   |        |
+                                               Software     Service
+
+ # Learning Path : ->Get The Basics.
+                   ->Use The Daily.
+                   ->Face The problem - Solve The Problem 
+                   ->Covering All the Basics more Than Efforts
+
+
+
+Version control is a system that records changes to files over time so that you can:
+
+1.Revisit previous versions of your work (Pichhle versions ko dekh sakte ho (jaise time machine))
+
+2.Collaborate with others without overwriting each other's changes (Team ke sath bina kisi conflict ke kaam kar sakte ho)
+
+3.Track the history of a project (who changed what and when) : (Samajh sakte ho ki kaun kya aur kab change kiya)
+
+| Concept               | Description                                                              |
+| --------------------- | ------------------------------------------------------------------------ |
+| **Repository (repo)** | A directory where version control tracks changes                         |
+| **Commit**            | A snapshot of your files at a specific point in time                     |
+| **Branch**            | A parallel line of development used for experimenting or adding features |
+| **Merge**             | Combining changes from different branches into one                       |
+| **Clone**             | A copy of a remote repository on your local machine                      |
+| **Push/Pull**         | Sending changes to or receiving changes from a remote repo               |
+
+
+
+                                                         Types of Version Control:
+
+# Local Version Control
+
+1.Only tracks changes on your local computer
+
+2.Simple but not ideal for team projects
+
+# Centralized Version Control (CVCS)
+
+1.One central server (e.g., Subversion)
+
+2.Team members must be online to access history
+
+# Distributed Version Control (DVCS)
+
+1.Each user has a full copy of the repository (e.g., Git)
+
+2.Supports offline work and better collaboration
+
+
+
+
+Popular Tools:
+1.Git (most widely used)
+
+2.GitHub, GitLab, Bitbucket (platforms hosting Git repositories)
+
+3.Subversion (SVN)
+
+                                                                Example Workflow (in Git):
+
+git init                  # Start a new Git repository
+git add file.txt          # Stage changes
+git commit -m "Message"   # Commit changes
+git push origin main      # Push changes to remote
+
+
+
+
+                                                           # GIT RESTORE #
+
+git restore ek Git command hai jo use hoti hai file ke changes ko undo karne ke liye. Matlab agar aapne koi file edit ki aur wo changes
+aapko pasand nahi aaye, to aap git restore use karke us file ko wapas uss state me le ja sakte ho jaisi wo last commit ke time thi.
+
+➡️ Yeh command filename.txt ko wapas uss tarah bana degi jaise wo last commit me thi.
+(Apke naye changes hat jaayenge.)
+
+* Example : git restore filename.txt
+
+➡️ Yeh command file ko staging area se hata degi (matlab git add se jo add ki thi usse wapas working directory me le aayegi),
+  bina content change kiye.
+
+
+* Example : git restore --staged filename.txt
+
+
+
+# git restore = File ko undo karna / original state me lana.
+
+Use jab karo jab:
+🔸 Tumhare changes galat lag rahe ho
+🔸 Tum changes ko wapas pehle jaise karna chahte ho
+🔸 Tumne galti se git add kar diya ho kisi file ko
+
+
+
+
+#  In Git, reset command ka use hota hai commit history ya staging area ko change karne ke liye. 
+   Iske mainly 3 types hote hain: soft, mixed (default), aur hard.
+
+  🔁 git reset --soft
+
+  📖 Meaning: 1. Ye sirf HEAD (pointer) ko peeche le jaata hai.
+              2. Staging area aur working directory same rehte hain.
+              3. Changes commit se hat jaate hain, lekin staging me bane rehte hain.
+
+💡 Use Kab Karein:
+Agar tumne galti se commit kar diya ho, lekin tumhare changes abhi bhi chahiye (aur staged bhi rehne chahiye), to soft reset sahi hai.
+
+🧪 Example:  git reset --soft HEAD~1
+
+➡️ Pichla commit hata do, lekin changes staged (ready to commit) rahenge.
+
+
+  💣 git reset --hard
+
+  📖 Meaning:  1. HEAD peeche chala jaata hai
+               2. Staging area aur working directory dono reset ho jaate hain.
+               3. Changes puray delete ho jaate hain. ❌ 
+
+  ⚠️ Warning:
+               Isse data loss ho sakta hai, agar commit ke baad koi changes the to wo chale jaayenge.
+
+💡 Use Kab Karein: Agar tumhe ek clean slate chahiye — bina kisi commit, staging, ya file changes ke — to hard reset use karo.
+
+🧪 Example: git reset --hard HEAD~1
+
+➡️ Pichla commit bhi gayab, aur saare changes bhi delete.
+
+🎯 Summary Table:
+
+| Command            | Commit | Staging | Working Directory | Safe? |
+| ------------------ | ------ | ------- | ----------------- | ----- |
+| `git reset --soft` | 🔙     | ✅       | ✅                 | ✅     |
+| `git reset --hard` | 🔙     | ❌       | ❌                 | ❌     |
