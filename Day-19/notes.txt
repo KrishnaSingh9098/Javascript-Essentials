@@ -135,3 +135,147 @@ Agar tumne galti se commit kar diya ho, lekin tumhare changes abhi bhi chahiye (
 | ------------------ | ------ | ------- | ----------------- | ----- |
 | `git reset --soft` | 🔙     | ✅       | ✅                 | ✅     |
 | `git reset --hard` | 🔙     | ❌       | ❌                 | ❌     |
+
+
+
+ # GIT BRANCHES : git branch is a Git command used to list, create, rename, or delete branches.
+
+ 🔧 Common Use of git branch:
+
+
+| Command                     | What it does                              |
+| --------------------------- | ------------------------------------------ |
+| `git branch`                | Lists all local branches                   |
+| `git branch <name>`         | Creates a new branch with the given name   |
+| `git branch -d <name>`      | Deletes the specified branch (safe delete) |
+| `git branch -D <name>`      | Force deletes a branch (unsafe delete)     |
+| `git branch -m <old> <new>` | Renames a branch                           |
+| `git branch -a`             | Lists all branches (local + remote)        |
+| `git branch -r`             | Lists only remote branches                 |
+
+
+🏎️ 4. Create & Switch in One Command : 
+ 
+   git checkout -b <branch-name>
+# or
+   git switch -c <branch-name>
+
+
+
+❌ 8. Delete a Branch : 
+
+Locally: git branch -d <branch-name>
+Remotely:git push origin --delete <branch-name>
+
+📌 Example: 
+
+# Create a branch
+git branch feature/login
+
+# Switch to it
+git checkout feature/login
+
+# Or do both at once:
+git checkout -b feature/login
+
+
+
+🧪 Example Workflow : 
+
+# Start from main
+git checkout main
+
+# Create a new branch
+git checkout -b feature/dashboard
+
+# Make changes, then:
+git add .
+git commit -m "Add dashboard page"
+
+# Push to remote
+git push -u origin feature/dashboard
+
+# Done? Merge back
+git checkout main
+git merge feature/dashboard
+
+# Delete the branch
+git branch -d feature/dashboard
+git push origin --delete feature/dashboard
+
+
+
+🎯 Why Use Branches?
+
+Branches let you:
+
+Work on features without affecting the main code.
+
+Experiment and rollback easily.
+
+Collaborate without conflicts by isolating each person’s work.
+
+
+
+
+🧠 What is git stash?  : git stash is a Git command used to temporarily save changes in your working directory without committing them, so you
+                         can work on something else (like switching branches) and come back to those changes later.
+
+                         It's like putting your changes in a drawer for safekeeping.
+
+  🔧 Typical Use Case : 
+
+You’ve made changes, but you're not ready to commit yet—and now you need to:
+
+1.switch branches
+
+2.pull updates
+
+3.work on something urgent
+
+Instead of committing or discarding your changes, you stash them.                       
+
+✅ Basic Commands and Examples
+1. Stash Your Changes   : git stash
+This will:
+
+1.Save tracked changes (not untracked or ignored files).
+
+2.Clean your working directory (like git reset --hard).
+
+
+2. List All Stashes : git stash list
+
+Shows stash history: 
+
+stash@{0}: WIP on main: abc1234 Some message
+stash@{1}: ...
+
+ 
+
+
+
+
+3. Apply the Most Recent Stash : git stash apply
+Or apply a specific one:git stash apply stash@{1}
+
+4. Apply and Remove from Stash : git stash pop
+5. Drop a Specific Stash : git stash drop stash@{0}
+6. Clear All Stashes : git stash clear
+
+
+
+🔄 Quick Real-World Example : 
+
+# You're on 'main' and editing files
+echo "temporary code" >> script.js
+
+# Suddenly you need to switch to another branch
+git stash            # Save your work
+git checkout bugfix  # No problem switching now
+# do some work...
+
+# Now come back
+git checkout main
+git stash pop        # Bring your work back
+
