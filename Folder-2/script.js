@@ -34,7 +34,7 @@
 // var a=10
 // console.log(a)   // 10 - Output
 
-// let mode = "dark";
+// let mode = prompt('Enter The MODe');
 // let color;
 
 // if (mode === "dark") {

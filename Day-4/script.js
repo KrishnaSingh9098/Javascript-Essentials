@@ -174,40 +174,40 @@
 // Example :            
 
 
-function sums(a,...nums){
-    console.log(a)                           
-    console.log(nums)                       
-    console.log(...nums)                    
-}
+// function sums(a,...nums){
+//     console.log(a)                           
+//     console.log(nums)                       
+//     console.log(...nums)                    
+// }
 
-sums(1,2,3,4,5)
+// sums(1,2,3,4,5)
 
 
 
-function logMessages(...messages) {
-    console.log(messages);  // Output will be an empty array
-  }
+// function logMessages(...messages) {
+//     console.log(messages);  // Output will be an empty array
+//   }
   
-  logMessages("Hello");
-  logMessages();
+//   logMessages("Hello");
+//   logMessages();
 
 
 
-  function sums(a,...nums){
-    console.log(a)                           
-    console.log(nums)                       
-    console.log(...nums)  
-    let sum = 0;
-for(let i=0;i<nums.length;i++){
-    sum+=nums[i];
+//   function sums(a,...nums){
+//     console.log(a)                           
+//     console.log(nums)                       
+//     console.log(...nums)  
+//     let sum = 0;
+// for(let i=0;i<nums.length;i++){
+//     sum+=nums[i];
    
-}  
-return sum;                
-}
+// }  
+// return sum;                
+// }
 
 
-let c = sums(1,2,3,4,5)
-console.log(c)
+// let c = sums(1,2,3,4,5)
+// console.log(c)
 
 
 function test(){

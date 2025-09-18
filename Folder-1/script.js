@@ -21,30 +21,28 @@
 
 // Arithmatic Operation  { + , - , * , /, %}
 
-// var a =20;
-// var b=20;
-// var c = a+b
-// console.log(c)
+var a =20;
+var b=20;
+var c = a+b
+console.log(c)
 
-// var groom = 'Krishna Singh Jhalwar'
-// var bride = 'Ritu Singh Kotar'
+var groom = 'Krishna Singh Jhalwar'
+var bride = 'Ritu Singh Kotar'
 
-// var MArried = groom + " : Married :" +bride
-// console.log(MArried)
-// console.log("You married a perfect man in the house " + groom)
+var MArried = groom + " : Married :" +bride
+console.log(MArried)
+console.log("You married a perfect man in the house " + groom)
 
 
 // Alert in the websites With the help of the Console -- ALERT
-
-// alert("Niklo MAdarChodo")
+ alert("Niklo MAdarChodo")
 
 // For Takung INput or print on the console Also  -- PROMPT-- Write Answer
-
-// console.log(prompt("AAgya Bhadwa"))
+ console.log(prompt("AAgya Bhadwa"))
 
 // Confirm Which accept only Yes Or No -- CONFIRM
 
-// confirm("Khada HOjne lAga LAvde")
+confirm("Khada HOjne lAga LAvde")
 
 
 //

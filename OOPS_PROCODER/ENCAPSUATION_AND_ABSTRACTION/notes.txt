@@ -1,0 +1,395 @@
+                                                        
+------------------------------------------{  OOPS : Object Oriented Programming Language }------------------------------------------
+
+There Are the Four Pillar of OOPS : 
+1.> Encapsulation : 
+
+                                                   🔹 Encapsulation – English Definition:
+
+Encapsulation is a fundamental concept in object-oriented programming where data (variables) and the code (methods) that operates 
+on the data are bundled together into a single unit, usually a class. It also restricts direct access to some of the object's 
+components, which helps protect the integrity of the data.
+
+✅ Key Points:
+
+1.Keeps data safe from outside interference.
+
+2.Access is controlled through methods (getters/setters).
+
+3.Improves security, modularity, and maintainability of code.
+---------------------------------------------------------------------------------------------------------------------------------------
+                                                  🔹 Encapsulation – Hinglish Definition:
+
+Encapsulation object-oriented programming ka ek basic concept hai jisme data (variables) aur us data par kaam karne wale functions 
+(methods) ko ek unit (jaise class) mein bundle kiya jaata hai. Ye concept data ko direct access se bachata hai aur sirf defined 
+methods ke through hi use access ya modify karne deta hai.
+
+✅ Main Points:
+
+1.Data ko direct access se protect karta hai.
+
+2.Sirf methods ke through data ko access/modify kiya ja sakta hai.
+
+3.Code secure, manageable aur modular banta hai.
+
+---------------------------------------------------------------------------------------------------------------------------------------
+2.> Abstraction :
+         
+         
+      
+    
+3.> Inheritance :
+
+4.> Polymorphism :
+
+
+
+
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------
+## SHERYIANS CODING SCHOOL : 
+
+//Yah ek purana tarika hai objects bnane ka ek constructor function se  jab javascript mein class ka concept nhi tha .
+
+ function Ghar() {
+   this.city = 'Delhi';
+   this.rooms = 3;
+   this.hall = 2;
+   this.bathroom = 2;
+   this.tv = 1;
+ }
+
+ let ghar1 = new Ghar();
+ console.log(ghar1);
+
+
+ // MODERN TARIKA : 
+
+ function Toffee(flavour,price,expiry){
+    this.flavour = flavour;
+    this.price = price;
+    this.expiry=expiry;
+
+}
+
+let t1 = new Toffee("Chocolate", 1.99, "12-05-2022");
+let t2 = new Toffee("vanilla", 2.99, "12-05-2023");
+
+
+
+🔁 Side-by-Side Comparison:
+
+| Feature              | `Ghar()` (No Params)   | `Toffee(...)` (With Params)    |
+| -------------------- | ---------------------- | ------------------------------ |
+| Input Parameters     | ❌ Nahi leta            | ✅ Leta hai                     |
+| Object Customization | ❌ Har object same hoga | ✅ Har object alag ho sakta hai |
+| Use Case             | Default object banana  | Dynamic/custom object banana   |
+| Reusability          | Kam                    | Zyada (due to flexibility)     |
+
+
+🎯 Conclusion:
+
+1.Ghar() ek default blueprint hai — sab ghar same.
+
+2.Toffee(...) ek flexible template hai — aap har baar naye data ke saath object bana sakte ho.
+
+Dono constructor function sahi hai, bas unka use-case alag hai.
+
+# Classes are the factory of the Objects .
+
+
+## CLAASSES  VALA TARIKA : 
+
+
+class Toffe{
+    //har class banate hi pehli cheej jo bnate hai uski aadat dal lo uska naam hai constructor .
+    constructor(){
+        this.name = "choco lele";
+        this.flavour = 'chocolate';
+        this.color = 'brown';
+        this.weight= '0.5gm';
+        this.ingredients = ["walnuts", 'almonds', 'cashews', 'dragonfruit', 'kismiss'];
+        this.expiry = "2025"
+    }
+}
+
+let t1 = new Toffe();
+
+
+🧠 Hinglish Explanation:
+
+.> Aapne ek class banayi hai jiska naam hai Toffe.
+
+.> Jab bhi aap new Toffe() likh ke object banate ho, sabse pehle constructor() function automatically call hota hai.
+
+.> constructor() ke andar aap this.property likh ke us object ke andar properties set kar rahe ho:
+   name, flavour, color, etc.
+
+.> ingredients ek array hai jisme multiple cheezen hain.
+
+.> Jab aap let t1 = new Toffe(); likhte ho, ek naya object ban jata hai jisme ye sab properties aa jati hain.
+
+   Ab agar aap console.log(t1); karoge, to aapko ek full object dikhega with all values.
+
+
+💬 Bhojpuri Style Explanation:
+
+Bhaiya, e code me ka ho rahal ba — ek class banal ba Toffe naam ke.
+Jab tu new Toffe() ke help se ek naya toffee ka item banawela, tab automatic constructor chalu ho jala.
+Ee constructor bole to — pehla se taiyar recipe — jisme sab materials set kar dehal ba:
+
+Naam: choco lele
+
+Swad: chocolate
+
+Rang: brown
+
+Wajan: 0.5 gram
+
+Saamaan: badam, akhrot, kismiss, sab kuch!
+
+Khatam hone ke tarik: 2025
+
+Toh jab tu let t1 = new Toffe(); karbu, ek naya toffee ka dabba ban ke mil jala. Ab tu usko kahin bhi use kar sakat ba.
+
+🔚 Output:          Toffe {
+                     name: 'choco lele',
+                     flavour: 'chocolate',
+                     color: 'brown',
+                     weight: '0.5gm',
+                     ingredients: [ 'walnuts', 'almonds', 'cashews', 'dragonfruit', 'kismiss' ],
+                     expiry: '2025'
+                   }
+                   
+
+
+/# CLASS WITH PARAMETER OR METHOD : 
+
+
+class Toffe {
+    constructor(name, flavour, color, weight, expiry) {
+        this.name = name;
+        this.flavour = flavour;
+        this.color = color;
+        this.weight = weight;
+        this.expiry = expiry;
+
+        // Ingredients same sab ke liye
+        this.ingredients = ["walnuts", 'almonds', 'cashews', 'dragonfruit', 'kismiss'];
+    }
+
+    describe() {
+        console.log(`${this.name} is a ${this.flavour}-flavored toffee of color ${this.color}, weighs ${this.weight}, and expires in ${this.expiry}, and which includes ingredients like ${this.ingredients}.`);
+    }
+}
+
+let t4 = new Toffe("Choco Boom", "Chocolate", "Dark Brown", "1gm", "2026");
+let t5 = new Toffe("Fruity Bite", "Strawberry", "Pink", "0.8gm", "2025");
+
+console.log(t4);
+t4.describe();
+
+console.log(t5);
+t5.describe();
+
+
+🔍 Summary:
+
+| Feature        | Value                                          |
+| -------------- | ---------------------------------------------- |
+| Dynamic Fields | `name`, `flavour`, `color`, `weight`, `expiry` |
+| Fixed Field    | `ingredients` – same for all toffees           |
+| Method         | `describe()` – batata hai toffee ka info       |
+
+
+//-------------------------------------------------------------------------------------------------------------------------------------
+
+# PROMPT : 
+
+hlo chatgpt mujhe js me oops ke concept ke baare me itta pata h ki function k  use krke or this k use krke or new k use krke hum 
+new new objects bna skte hai  classes k use krke bhi hum nye nye o jects bna skte hai itna mujhe aata hai yha se aaage mujhe thoda 
+thoda dhere dheere uper badhna hai to mujhe seekhao
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+✅ STEP 2: METHOD BY USING PROTOTYPE : 
+
+THEORY : Jab bhi constructor banaoge or kuch aisa mil gya jo ki sab me same hai to use kabhi direct constructor mein banana galt 
+         tareeka hota hai ; par sahi tareeka hai prototype ka use krna kyuki prototype me same krne per jitne bhi new ke sath instance
+         banaoge vo saare instance by default proto ki value hold kr rhe honge ya krenge.
+
+🔸 Hinglish (Corrected and Clear Version):
+
+Jab bhi aap constructor function banate ho, aur agar koi cheez aisi mile jo sabhi instances ke liye same ho, toh usko direct
+constructor ke andar banana galat tareeka hota hai.
+Uska sahi tareeka hai ki aap us cheez ko constructor ke prototype mein define karo.
+
+Kyuki jab aap new keyword ke through multiple instances banate ho, toh wo sabhi instances by default us prototype ki values ko 
+access karte hain.
+Isse memory bhi save hoti hai aur performance bhi better hoti hai.
+
+
+
+🔸 Proper English Version:
+
+Whenever you create a constructor function and find that there's something common across all instances, it's not a good practice 
+to define it directly inside the constructor.
+
+The correct approach is to define such shared properties or methods on the constructor's prototype.
+
+This is because when you create multiple instances using the new keyword, all of them automatically inherit from the prototype.
+This not only reduces memory usage but also improves performance, since the shared value or method is not duplicated for each instance.
+
+
+🔹 Example:    
+
+ function Car(name) {
+    this.name = name;
+}
+
+// Method ko prototype pe add karo (better memory)
+
+Car.prototype.drive = function() {
+    console.log(`${this.name} is driving`);
+};
+
+const car1 = new Car("BMW");
+car1.drive(); // BMW is driving
+
+
+
+
+
+
+
+
+
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+✅ STEP 2: prototype ka use
+
+Agar tum constructor function use karte ho, to prototype ka use important hota hai for method sharing.
+
+🔹 Example:
+function Car(name) {
+    this.name = name;
+}
+
+// Method ko prototype pe add karo (better memory)
+Car.prototype.drive = function() {
+    console.log(`${this.name} is driving`);
+};
+
+const car1 = new Car("BMW");
+car1.drive(); // BMW is driving
+
+
+🔸 Isse ek hi method sabhi objects use karte hain — memory efficient.
+
+✅ STEP 3: Inheritance with class and extends
+
+Agar tum ek class bana ke usse dusri class ko inherit karna chahte ho, to extends ka use hota hai.
+
+🔹 Example:
+class Animal {
+    constructor(name) {
+        this.name = name;
+    }
+
+    speak() {
+        console.log(`${this.name} makes a sound`);
+    }
+}
+
+class Dog extends Animal {
+    constructor(name, breed) {
+        super(name); // Parent class ka constructor call
+        this.breed = breed;
+    }
+
+    speak() {
+        console.log(`${this.name} barks`);
+    }
+}
+
+const dog1 = new Dog("Tommy", "Labrador");
+dog1.speak(); // Tommy barks
+
+
+🔸 super() ka use parent class ke constructor ko call karne ke liye hota hai.
+
+✅ STEP 4: Private Properties with #
+
+Modern JavaScript mein private fields create karne ke liye # use hota hai.
+
+🔹 Example:
+class BankAccount {
+    #balance = 0;
+
+    constructor(owner) {
+        this.owner = owner;
+    }
+
+    deposit(amount) {
+        if (amount > 0) this.#balance += amount;
+    }
+
+    getBalance() {
+        return this.#balance;
+    }
+}
+
+const acc = new BankAccount("Aman");
+acc.deposit(1000);
+console.log(acc.getBalance()); // 1000
+// console.log(acc.#balance); // ❌ Error: Private field
+
+
+🔸 Yeh abstraction ka example hai — data ko bahar se directly access nahi kar sakte.
+
+✅ STEP 5: Static Methods and Properties
+
+Static methods ka object se koi lena dena nahi hota — woh class ke level pe hote hain.
+
+🔹 Example:
+class MathUtil {
+    static add(a, b) {
+        return a + b;
+    }
+}
+
+console.log(MathUtil.add(5, 3)); // 8
+
+
+🔸 Static method ko tum new se create object se call nahi kar sakte, sirf class se.
+
+✅ NEXT: Tumhe kya karna chahiye?
+
+Agar tum itna samajh gaye ho, to agla step hoga:
+
+Practice problems:
+
+Ek Student class banao jo Person class se inherit ho.
+
+Ek BankAccount class banao with private balance and deposit/withdraw methods.
+
+Real life examples socho OOPs mein kaise design hote hain:
+
+Car → Vehicle
+
+Dog → Animal
+
+Button → UIElement
+
+Advance OOP Concepts:
+
+Composition vs Inheritance
+
+Design patterns (Singleton, Factory)
+
+Interface (JS mein via duck typing)

@@ -1,0 +1,31 @@
+<html>
+<script>
+    function myFun() {
+        document.getElementById(
+            "gfg").innerHTML = "GeeksforGeeks";
+    }
+    // Mouse Event
+// document.addEventListener("mousemove", (e) => {
+//     console.log(`Mouse moved to (${e.clientX}, ${e.clientY})`);
+// });
+
+// // Keyboard Event
+// document.addEventListener("keydown", (e) => {
+//     console.log(`Key pressed: ${e.key}`);
+// });
+
+// document.querySelector("div").addEventListener("click", () => {
+//     console.log("Div clicked");
+// }, true); // Capturing phase
+ const button = document.getElementById('opop');
+        button.addEventListener("click", (e) => {
+            console.log("Button clicked");
+            e.stopPropagation();
+        });
+</script>
+
+<body>
+    <button onclick="myFun()" id="opop">Click me</button>
+    <p id="gfg"></p>
+</body>
+</html>

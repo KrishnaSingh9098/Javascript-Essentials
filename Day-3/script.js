@@ -11,6 +11,7 @@
 
 //  var d = str.replace("Krishna", "Krish")
 //  var e = str.slice(0,5)
+//  console.log(d,e)
 
 
 //  let fullName = prompt("Enter Yor Full NAme :")

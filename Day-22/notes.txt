@@ -1,0 +1,19 @@
+1. Ye bc hai kya.
+2. karna kya hota hai.
+3. kyu karna hai.
+4.kaise karte hai 
+  a.functional class me classes ko mimic karna .
+  b.classes banana .
+  c.Objects banana .
+  4.purpose .
+
+
+
+1.  Objects ko Create krna jo ki sirf data hold naa kare unki functionality bhi hold kare,
+    aur aise Objectas ko create karna with a blueprint model.
+
+// Hum ek class banayenge us class se kai saare objects banege ab wo har objects kuch data hold krenge and kuch functionalities 
+   bhi hold karega jisko hum uske methods kahte hai , ye sab manually naa karna pade ki hum oops ke concept follow karte hai.
+
+
+   ## KYU KARNA HOTA HAI : CLEAN OR MANAGEABLE CODE LIKHNE KE LIYE.
