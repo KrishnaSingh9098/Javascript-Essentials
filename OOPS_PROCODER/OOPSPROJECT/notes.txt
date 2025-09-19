@@ -1,0 +1,67 @@
+// Define a class called 'Library'
+class Library {
+  constructor() {
+    // Initialize an empty array called 'books' to store book names
+    this.books = [];
+  }
+
+  // Method to add a book to the 'books' array
+  addBooks(book) {
+    this.books.push(book); // Add the book to the list
+  }
+
+  // Method to print all books in the library
+  listAllBooks() {
+    // Loop through each book and print it
+    this.books.forEach(function (book) {
+      console.log(book);
+    });
+  }
+}
+
+// Create an instance (object) of the Library class
+let bhopal = new Library();
+
+// Add two books to the library
+bhopal.addBooks("SEX STORY");
+bhopal.addBooks("HORNY SEX STORY");
+
+// List all books in the library (prints them to the console)
+bhopal.listAllBooks();
+
+//-------------------------------------------------------------------------------------------------------------------------------------
+
+// Define a Book class
+class Book {
+  constructor(name, author, price, isbfNo) {
+    this.name = name;               // Book name
+    this.author = author;           // Author name
+    this.isbfNo = isbfNo;           // ISBN or similar unique ID
+    this.price = price;             // Price of the book
+    this.isReadStatus = false;      // Has the user read it? Default: false
+  }
+
+  // Method to display book information
+  info() {
+    console.log(
+      `${this.name} is written by the author ${this.author}, ` +
+      `available on Amazon for $${this.price}. ` +
+      `${this.isReadStatus ? "You have read this book." : "You have not read this book yet."}`
+    );
+  }
+
+  // Method to toggle read status
+  changeReadStatus() {
+    this.isReadStatus = !this.isReadStatus;
+  }
+}
+
+// Create a new book object
+let b1 = new Book("Krishna", "Krishan the Legend", 99, "@9648dfsdg691");
+
+// Call info method to display book details
+b1.info();  // You have not read this book yet
+
+// Change read status and show info again
+b1.changeReadStatus();
+b1.info();  // You have read this book.
